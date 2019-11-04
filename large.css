@@ -544,8 +544,8 @@
   grid-area: side;
   display: grid;
   grid-gap: 2px;
-  grid-template-columns: repeat(1fr, 4);
-  grid-template-rows: repeat(4, 300px);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 300px);
   grid-template-areas:
     "info1 info2 info3 info4 ";
 
