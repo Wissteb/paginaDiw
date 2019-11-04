@@ -181,7 +181,7 @@
 
   .headimage {
     grid-area: headimage;
-    background-image: url(https://cdn.windowsreport.com/wp-content/uploads/2017/10/background-slideshow-error-1200x675.jpg );
+    background-image: url(img/pc.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,7 +251,7 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 70px 1fr 900px;
+    grid-template-rows: 1fr 90px 1fr 900px;
     grid-template-areas:
       "primerasection primerasection primerasection"
       "mainnav mainnav mainnav"
@@ -313,7 +313,7 @@
 
   .button3 {
     grid-area: button3;
-    background: #3ac4dd;
+    background-image: linear-gradient(to right bottom, #f2d85b, #ffc17f, #ffb7ae, #febad0, #d9c1da);
     color: #f8f8f8;
     padding: 20px;
     text-transform: uppercase;
@@ -333,9 +333,12 @@
 
   /* ***********+++Nav++++************* */
 
-
   .mainnav {
     grid-area: mainnav;
+    display: block;
+    position: sticky;
+    z-index: 9999;
+    top: 0px;
   }
 
   .menuvertical {
@@ -344,19 +347,23 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    background-color: rgba(194, 207, 203, 0.404);
+    height: 100px;
 
   }
 
   .item_menuvertical {
-    flex: 0 0 150px;
-    background-color: rgb(24, 240, 168);
+    flex: 1 1 100px;
+    background-color: rgb(160, 241, 214);
     list-style-type: none;
     border: rgb(22, 129, 129) 2px solid;
     padding: 6px;
     text-transform: uppercase;
     margin-right: 30px;
     height: 50px;
+    border-radius: 15px;
   }
+
 
   .menuvertical li a {
     text-decoration: none;
@@ -763,4 +770,3 @@
     color: rgb(218, 195, 195);
   }
 }
-
