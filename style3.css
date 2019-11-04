@@ -1,0 +1,3844 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 19px;
+}
+
+/* For Desktop */
+/*############################################################################
+#############################################################################
+############################################################################
+############################################################################*/
+@media (min-width: 1300px) {
+
+  /*###############Container of the document#####################*/
+  .contenedor {
+    background-color: white;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 1fr 1fr 200px;
+    /*para cambiar el ancho*/
+    grid-template-rows: 1000px auto auto;
+    grid-template-areas:
+      "header header header"
+      " content content side "
+      "footer footer footer";
+    /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
+  #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
+
+
+  }
+
+  /*
+  <!--####### ########## Here is  header ############# -->
+  ###################################################################################
+  */
+  .main-head {
+    grid-area: header;
+  }
+
+  /* Container of header */
+  .cuerpoheader {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 250px 600px;
+    grid-template-areas:
+      "prehead prehead busqueda"
+      "headlogo headtitulo headnav"
+      "headimage headimage headimage"
+  }
+
+  /* Button and input search for the web */
+  /*container*/
+  .busqueda {
+    grid-area: busqueda;
+    background-color: rgb(233, 215, 195);
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "buscar buttonbuscar";
+
+  }
+
+  .buttonbus {
+    grid-area: buttonbuscar;
+  }
+
+  .buscar {
+    grid-area: buscar;
+  }
+
+  .lupa {
+    width: 30px;
+    height: 30px;
+  }
+
+  .inputsearch {
+    height: 40px;
+    background: #0b5b5d;
+    color: #63717f;
+    padding-left: 10px;
+    border-radius: 15px;
+
+  }
+
+  .buttonbuscar {
+    background: #0b5b5d;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.7s;
+    height: 30px;
+    background-image: url(img/lupa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .buttonbuscar:hover {
+    letter-spacing: 3px;
+    background: rgb(175, 102, 102);
+    transition: all 0.6s ease 0s;
+  }
+
+
+  /* social network */
+
+  .prehead {
+    grid-area: prehead;
+    background-color: rgb(233, 215, 195);
+  }
+
+  .facebookc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .instagramc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .twiterc1 {
+
+    width: 35px;
+    height: 35px;
+  }
+
+  /* logo of de web */
+
+  .headlogo {
+    grid-area: headlogo;
+    background-color: #0097A7;
+  }
+
+  .logo1 {
+    position: absolute;
+    top: 0px;
+    bottom: 20px;
+    left: 0px;
+    height: 240px;
+
+  }
+
+  /* title */
+  .headtitulo {
+    grid-area: headtitulo;
+    background-color: #0097A7;
+  }
+
+  .titulo {
+    font-size: 120px;
+    font-family: cursive;
+    color: #f3e0e0;
+
+  }
+
+  /* navigation */
+
+  .headnav {
+    grid-area: headnav;
+    background-color: #0097A7;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 5px;
+
+  }
+
+  .item_menuhead {
+    flex: 0 1 100px;
+    list-style-type: none;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+
+  .menuhead li a {
+    transition: all .9s;
+    font-size: 20px;
+    color: rgb(195, 180, 197);
+  }
+
+  .menuhead li a:hover {
+    background-color: rgb(222, 160, 233);
+    color: white;
+    font-size: 25px;
+    border-color: #b65;
+  }
+
+  /* image and text of head */
+
+  .headimage {
+    grid-area: headimage;
+    background-image: url(https://cdn.windowsreport.com/wp-content/uploads/2017/10/background-slideshow-error-1200x675.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    /* filter: blur(6px);*/
+
+  }
+
+  /*una caja flex para el contenido del header ,recoge boton y texto*/
+  .caja1 {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .texto1 {
+    flex: 0 1 auto;
+    order: 0;
+    background-color: rgba(61, 61, 60, 0.609);
+    width: 50%;
+  }
+
+  .titulotexto {
+    font-size: 50px;
+  }
+
+  .bluebtn {
+    margin-top: 50px;
+    border: none;
+    background: #d064da;
+    color: #060707;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    flex: 0 1 50px;
+    width: 30%;
+    order: 0;
+    transition: all 0.3s ease 0s;
+    background-image: url(img/estudiar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .bluebtn:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.6s ease 0s;
+  }
+
+
+
+  /*
+  <!--##### ##########Aqui empieza Main ############# -->
+  ###################################################################################
+  */
+
+  /* container */
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 70px 1fr 900px;
+    grid-template-areas:
+      "primerasection primerasection primerasection"
+      "mainnav mainnav mainnav"
+      "tercerasection tercerasection tercerasection"
+      "cuartasection cuartasection cuartasection"
+  }
+
+  /* ***********+++First section++++************* */
+  .primerasection {
+    background-color: rgba(230, 222, 222, 0.808);
+    grid-area: primerasection;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". textopri . "
+      "icono1 icono2 icono3"
+      " . button3 . "
+
+  }
+
+  .textopri {
+    grid-area: textopri;
+
+  }
+
+  .textopritext {
+    font-size: 45px;
+  }
+
+  .icono1 {
+    grid-area: icono1;
+
+  }
+
+  .icono2 {
+    grid-area: icono2;
+  }
+
+  .icono3 {
+    grid-area: icono3;
+  }
+
+  .aprende {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+
+  }
+
+  .practica,
+  .lee {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+  }
+
+  .button3 {
+    grid-area: button3;
+    background: #3ac4dd;
+    color: #f8f8f8;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    width: 90%;
+    transition: all 0.3s ease 0s;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .button3:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.7s ease 0s;
+  }
+
+  /* ***********+++Nav++++************* */
+
+
+  .mainnav {
+    grid-area: mainnav;
+  }
+
+  .menuvertical {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+  }
+
+  .item_menuvertical {
+    flex: 0 0 150px;
+    background-color: rgb(24, 240, 168);
+    list-style-type: none;
+    border: rgb(22, 129, 129) 2px solid;
+    padding: 6px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    height: 50px;
+  }
+
+  .menuvertical li a {
+    text-decoration: none;
+    width: 140px;
+    height: 30px;
+    transition: all .9s;
+    font-size: 16px;
+  }
+
+  .menuvertical li a:hover {
+    color: white;
+    font-size: 20px;
+  }
+
+  /* ***********+++Third Section++++************* */
+
+
+  .tercerasection {
+    grid-area: tercerasection;
+
+  }
+
+  .tercerasection {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 500px;
+    grid-template-areas:
+      ". textoter . "
+      "cajater1 cajater2 cajater3"
+
+  }
+
+  /* Text */
+  .textoter {
+    grid-area: textoter;
+  }
+
+  .why {
+    font-size: 30px;
+    color: rgb(255, 71, 230);
+  }
+
+  /**** First card ******/
+  .cajater1 {
+    grid-area: cajater1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+    background-color: rgb(0, 128, 100);
+
+  }
+
+  .imgter1 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+
+  }
+
+  .cajater1:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(60px);
+
+  }
+
+  .textoinclude1 {
+    flex: 0 1 100px;
+    order: 1;
+
+  }
+
+  /***** Second Card *******/
+  .cajater2 {
+    grid-area: cajater2;
+    background-color: rgb(24, 202, 113);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+
+  }
+
+  .cajater2:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(60px);
+
+  }
+
+  .imgter2 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude2 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+  /********* Third Card *********/
+
+  .cajater3 {
+    grid-area: cajater3;
+    background-color: rgb(250, 102, 127);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+  }
+
+  .cajater3:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(60px);
+
+  }
+
+  .imgter3 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude3 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+
+  /* ***********+++fourth Section++++************* */
+
+
+  .cuartasection {
+    grid-area: cuartasection;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+      " . sobre sobre "
+      " . cajacuar . ";
+    background-image: radial-gradient(circle, #e5aaa1, #c39a81, #9d8b6a, #787b5c, #576a53, #405f51, #2d5350, #1f474d,
+        #1b3e4e, #22334a, #2d2840, #341c31);
+  }
+
+  .sobre {
+    grid-area: sobre;
+    font-size: 90px;
+    color: rgb(7, 4, 7);
+  }
+
+  .cajacuar {
+    grid-area: cajacuar;
+    opacity: 0.8;
+    transition: 0.5s;
+    font-size: 20px;
+    color: #d1c7c7;
+
+
+  }
+
+  .cajacuar:hover {
+    opacity: 1;
+    color: #000000;
+    font-size: 23px;
+    transform: translateY(-30px);
+
+  }
+
+  /* #########################Sidebar########################################
+  ################################################################################### */
+  .side {
+    grid-area: side;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 300px);
+    grid-template-areas:
+      "info1 "
+      "info2 "
+      "info3 "
+      "info3 ";
+  }
+
+  .info1 {
+    border-radius: 10px;
+    background-color: #5ffbf148;
+    border: #5ffbbf solid 10px;
+
+
+  }
+
+  .info2 {
+    border: #5ffbbf solid 10px;
+    border-radius: 10px;
+    background-color: #5ffbf13d;
+  }
+
+  .info3 {
+    border: #e45ffb solid 10px;
+    border-radius: 10px;
+    background-color: #5ffbf146;
+  }
+
+  .info4 {
+    border: #e45ffb solid 10px;
+    border-radius: 10px;
+    background-color: #5ffbf12f;
+  }
+
+
+  /* #########################++FOOTER++########################################
+  ################################################################################### */
+  .footer {
+    grid-area: footer;
+    color: #fff;
+    background: #0097A7;
+
+  }
+
+  /* container */
+  .footer-container {
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo navigation secondary social"
+      "contact contact . novedades";
+  }
+
+
+  .footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " footer-container "
+      "buttom-line";
+  }
+
+  /* logo */
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .logo2 {
+    height: 250px;
+    width: 250px;
+
+    /* nav */
+  }
+
+  .footer-nav {
+    grid-area: navigation;
+    justify-self: center;
+    list-style: none;
+  }
+
+  .footer-secondary-nav {
+    grid-area: secondary;
+    list-style: none;
+    justify-self: center;
+  }
+
+  .social-networks {
+    grid-area: social;
+  }
+
+  .contact-block {
+    grid-area: contact;
+  }
+
+  .novedades {
+    grid-area: novedades;
+  }
+
+  /* socila network */
+  .social-networks {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+
+  .social-networks h3 {
+    grid-column: 1 / -1;
+  }
+
+  .facebook {
+    justify-self: right;
+
+  }
+
+  .facebookc {
+    width: 50px;
+    height: 50px;
+  }
+
+  .instagram {
+    justify-self: left;
+  }
+
+  .instagramc {
+    width: 50px;
+    height: 50px;
+  }
+
+  .twiterc {
+
+    width: 50px;
+    height: 50px;
+  }
+
+  /* contact */
+  .contact-block,
+  .novedades {
+    align-self: end;
+  }
+
+  .contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+  }
+
+  .contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+  }
+
+  .social-networks {
+    border-bottom: 2px solid #f99639;
+  }
+
+
+  /* Terms */
+  .buttom-line {
+    background-color: rgb(233, 215, 195);
+    grid-area: buttom-line;
+    color: #000000;
+  }
+
+  .legal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #000000;
+
+  }
+
+  .novedades-text,
+  .text-input {
+    text-align: center;
+  }
+
+  .text-input input {
+    border-radius: 25px;
+  }
+
+  .text-input input:first-child {
+    height: 2rem;
+  }
+
+  .text-input input:last-child {
+    height: 35px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    background-color: #f99639;
+    width: 100px;
+    font-weight: bold;
+  }
+
+  .novedades-text icon,
+  .novedades-text p {
+    margin: 0 0 1.1rem;
+  }
+
+  .novedades-text p {
+    line-height: 2rem;
+  }
+
+  .footer a {
+    color: rgb(218, 195, 195);
+  }
+}
+
+
+/* @media (min-width: 500px) {
+  .wrapper {
+  grid-template-columns: 1fr 3fr;
+  background-color: rgb(110, 226, 43);
+  grid-template-areas:
+  "header header"
+  "nav nav"
+  "sidebar content"
+  "ad footer";
+  }
+  nav ul {
+  display: flex;
+  justify-content: space-between;
+  }
+  }
+  @media (min-width: 700px) {
+  .wrapper {
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: blueviolet;
+  grid-template-areas:
+  "header header header"
+  "nav content sidebar"
+  "nav content ad"
+  "footer footer footer"
+  
+  }
+  nav ul {
+  flex-direction: column;
+  }
+  } */
+/*################################################################
+###################################################################################
+######################################################################################
+################################################################################
+###############################################################################
+##########################################################################*/
+
+@media (min-width: 995px) and (max-width: 1299px) {
+
+  /*###############Container of the document#####################*/
+  .contenedor {
+    background-color: white;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 1fr 1fr 200px;
+    /*para cambiar el ancho*/
+    grid-template-rows: 1000px auto 300px 1fr;
+    grid-template-areas:
+      "header header header"
+      " content content content"
+      " side side side"
+      "footer footer footer";
+    /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
+      #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
+
+  }
+
+  /*
+      <!--####### ########## Here is  header ############# -->
+      ###################################################################################
+      */
+  .main-head {
+    grid-area: header;
+  }
+
+  /* Container of header */
+  .cuerpoheader {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 250px 600px;
+    grid-template-areas:
+      "prehead prehead busqueda"
+      "headlogo headtitulo headnav"
+      "headimage headimage headimage"
+  }
+
+  /* Button and input search for the web */
+  /*container*/
+  .busqueda {
+    grid-area: busqueda;
+    background-color: rgb(233, 215, 195);
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "buscar buttonbuscar";
+
+  }
+
+  .buttonbus {
+    grid-area: buttonbuscar;
+  }
+
+  .buscar {
+    grid-area: buscar;
+  }
+
+  .lupa {
+    width: 30px;
+    height: 30px;
+  }
+
+  .inputsearch {
+    height: 40px;
+    background: #0b5b5d;
+    color: #63717f;
+    padding-left: 10px;
+    border-radius: 15px;
+
+  }
+
+  .buttonbuscar {
+    background: #0b5b5d;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.7s;
+    height: 30px;
+    background-image: url(img/lupa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .buttonbuscar:hover {
+    letter-spacing: 3px;
+    background: rgb(175, 102, 102);
+    transition: all 0.6s ease 0s;
+  }
+
+
+  /* social network */
+
+  .prehead {
+    grid-area: prehead;
+    background-color: rgb(233, 215, 195);
+  }
+
+  .facebookc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .instagramc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .twiterc1 {
+
+    width: 35px;
+    height: 35px;
+  }
+
+  /* logo of de web */
+
+  .headlogo {
+    grid-area: headlogo;
+    background-color: #0097A7;
+  }
+
+  .logo1 {
+    position: absolute;
+    top: 0px;
+    bottom: 20px;
+    left: 0px;
+    height: 240px;
+
+  }
+
+  /* title */
+  .headtitulo {
+    grid-area: headtitulo;
+    background-color: #0097A7;
+  }
+
+  .titulo {
+    font-size: 120px;
+    font-family: cursive;
+    color: #f3e0e0;
+
+  }
+
+  /* navigation */
+
+  .headnav {
+    grid-area: headnav;
+    background-color: #0097A7;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 5px;
+
+  }
+
+  .item_menuhead {
+    flex: 0 1 100px;
+    list-style-type: none;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+
+  .menuhead li a {
+    transition: all .9s;
+    font-size: 20px;
+    color: rgb(195, 180, 197);
+  }
+
+  .menuhead li a:hover {
+    background-color: rgb(222, 160, 233);
+    color: white;
+    font-size: 25px;
+    border-color: #b65;
+  }
+
+  /* image and text of head */
+
+  .headimage {
+    grid-area: headimage;
+    background-image: url(https://cdn.windowsreport.com/wp-content/uploads/2017/10/background-slideshow-error-1200x675.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    /* filter: blur(6px);*/
+
+  }
+
+  /*una caja flex para el contenido del header ,recoge boton y texto*/
+  .caja1 {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .texto1 {
+    flex: 0 1 auto;
+    order: 0;
+    background-color: rgba(61, 61, 60, 0.609);
+    width: 50%;
+  }
+
+  .titulotexto {
+    font-size: 50px;
+  }
+
+  .bluebtn {
+    margin-top: 50px;
+    border: none;
+    background: #d064da;
+    color: #060707;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    flex: 0 1 50px;
+    width: 30%;
+    order: 0;
+    transition: all 0.3s ease 0s;
+    background-image: url(img/estudiar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .bluebtn:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.6s ease 0s;
+  }
+
+
+
+  /*
+      <!--##### ##########Aqui empieza Main ############# -->
+      ###################################################################################
+      */
+
+  /* container */
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 70px 1fr 900px;
+    grid-template-areas:
+      "primerasection primerasection primerasection"
+      "mainnav mainnav mainnav"
+      "tercerasection tercerasection tercerasection"
+      "cuartasection cuartasection cuartasection"
+  }
+
+  /* ***********+++First section++++************* */
+  .primerasection {
+    background-color: rgba(230, 222, 222, 0.808);
+    grid-area: primerasection;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". textopri . "
+      "icono1 icono2 icono3"
+      " . button3 . "
+
+  }
+
+  .textopri {
+    grid-area: textopri;
+
+  }
+
+  .textopritext {
+    font-size: 45px;
+  }
+
+  .icono1 {
+    grid-area: icono1;
+
+  }
+
+  .icono2 {
+    grid-area: icono2;
+  }
+
+  .icono3 {
+    grid-area: icono3;
+  }
+
+  .aprende {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+
+  }
+
+  .practica,
+  .lee {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+  }
+
+  .button3 {
+    grid-area: button3;
+    background: #3ac4dd;
+    color: #f8f8f8;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    width: 90%;
+    transition: all 0.3s ease 0s;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .button3:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.7s ease 0s;
+  }
+
+  /* ***********+++Nav++++************* */
+
+
+  .mainnav {
+    grid-area: mainnav;
+  }
+
+  .menuvertical {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+  }
+
+  .item_menuvertical {
+    flex: 0 0 150px;
+    background-color: rgb(24, 240, 168);
+    list-style-type: none;
+    border: rgb(22, 129, 129) 2px solid;
+    padding: 6px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    height: 50px;
+  }
+
+  .menuvertical li a {
+    text-decoration: none;
+    width: 140px;
+    height: 30px;
+    transition: all .9s;
+    font-size: 16px;
+  }
+
+  .menuvertical li a:hover {
+    color: white;
+    font-size: 20px;
+  }
+
+  /* ***********+++Third Section++++************* */
+
+
+  .tercerasection {
+    grid-area: tercerasection;
+
+  }
+
+  .tercerasection {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 500px;
+    grid-template-areas:
+      ". textoter . "
+      "cajater1 cajater2 cajater3"
+
+  }
+
+  /* Text */
+  .textoter {
+    grid-area: textoter;
+  }
+
+  .why {
+    font-size: 30px;
+    color: rgb(255, 71, 230);
+  }
+
+  /**** First card ******/
+  .cajater1 {
+    grid-area: cajater1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+    background-color: rgb(0, 128, 100);
+
+  }
+
+  .imgter1 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+
+  }
+
+  .cajater1:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(60px);
+
+  }
+
+  .textoinclude1 {
+    flex: 0 1 100px;
+    order: 1;
+
+  }
+
+  /***** Second Card *******/
+  .cajater2 {
+    grid-area: cajater2;
+    background-color: rgb(24, 202, 113);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+
+  }
+
+  .cajater2:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(60px);
+
+  }
+
+  .imgter2 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude2 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+  /********* Third Card *********/
+
+  .cajater3 {
+    grid-area: cajater3;
+    background-color: rgb(250, 102, 127);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+  }
+
+  .cajater3:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(60px);
+
+  }
+
+  .imgter3 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude3 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+
+  /* ***********+++fourth Section++++************* */
+
+
+  .cuartasection {
+    grid-area: cuartasection;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+      " . sobre sobre "
+      " . cajacuar . ";
+    background-image: radial-gradient(circle, #e5aaa1, #c39a81, #9d8b6a, #787b5c, #576a53, #405f51, #2d5350, #1f474d,
+        #1b3e4e, #22334a, #2d2840, #341c31);
+  }
+
+  .sobre {
+    grid-area: sobre;
+    font-size: 90px;
+    color: rgb(7, 4, 7);
+  }
+
+  .cajacuar {
+    grid-area: cajacuar;
+    opacity: 0.8;
+    transition: 0.5s;
+    font-size: 20px;
+    color: #d1c7c7;
+
+
+  }
+
+  .cajacuar:hover {
+    opacity: 1;
+    color: #000000;
+    font-size: 23px;
+    transform: translateY(-30px);
+
+  }
+
+  /* #########################Sidebar########################################
+      ################################################################################### */
+  .side {
+    grid-area: side;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: repeat(4, 300px);
+    grid-template-areas:
+      "info1 info2 info3 info4 ";
+
+  }
+
+  .info1 {
+    border-radius: 10px;
+    background-color: #5ffbf148;
+    border: #5ffbbf solid 10px;
+
+
+  }
+
+  .info2 {
+    border: #5ffbbf solid 10px;
+    border-radius: 10px;
+    background-color: #5ffbf13d;
+  }
+
+  .info3 {
+    border: #e45ffb solid 10px;
+    border-radius: 10px;
+    background-color: #5ffbf146;
+  }
+
+  .info4 {
+    border: #e45ffb solid 10px;
+    border-radius: 10px;
+    background-color: #5ffbf12f;
+  }
+
+
+  /* #########################++FOOTER++########################################
+      ################################################################################### */
+  .footer {
+    grid-area: footer;
+    color: #fff;
+    background: #0097A7;
+
+  }
+
+  /* container */
+  .footer-container {
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo social"
+      "contact  novedades";
+  }
+
+
+  .footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " footer-container "
+      "buttom-line";
+  }
+
+  /* logo */
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .logo2 {
+    height: 250px;
+    width: 250px;
+
+    /* nav */
+  }
+
+  .footer-nav {
+
+    display: none;
+  }
+
+  .footer-secondary-nav {
+    display: none;
+  }
+
+  .social-networks {
+    grid-area: social;
+  }
+
+  .contact-block {
+    grid-area: contact;
+  }
+
+  .novedades {
+    grid-area: novedades;
+  }
+
+  /* socila network */
+  .social-networks {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+
+  .social-networks h3 {
+    grid-column: 1 / -1;
+  }
+
+  .facebook {
+    justify-self: right;
+
+  }
+
+  .facebookc {
+    width: 50px;
+    height: 50px;
+  }
+
+  .instagram {
+    justify-self: left;
+  }
+
+  .instagramc {
+    width: 50px;
+    height: 50px;
+  }
+
+  .twiterc {
+
+    width: 50px;
+    height: 50px;
+  }
+
+  /* contact */
+  .contact-block,
+  .novedades {
+    align-self: end;
+  }
+
+  .contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+  }
+
+  .contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+  }
+
+  .social-networks {
+    border-bottom: 2px solid #f99639;
+  }
+
+
+  /* Terms */
+  .buttom-line {
+    background-color: rgb(233, 215, 195);
+    grid-area: buttom-line;
+    color: #000000;
+  }
+
+  .legal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #000000;
+
+  }
+
+  .novedades-text,
+  .text-input {
+    text-align: center;
+  }
+
+  .text-input input {
+    border-radius: 25px;
+  }
+
+  .text-input input:first-child {
+    height: 2rem;
+  }
+
+  .text-input input:last-child {
+    height: 35px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    background-color: #f99639;
+    width: 100px;
+    font-weight: bold;
+  }
+
+  .novedades-text icon,
+  .novedades-text p {
+    margin: 0 0 1.1rem;
+  }
+
+  .novedades-text p {
+    line-height: 2rem;
+  }
+
+  .footer a {
+    color: rgb(218, 195, 195);
+  }
+}
+
+
+/*################################################################
+###################################################################################
+######################################################################################
+################################################################################
+###############################################################################
+##########################################################################*/
+
+@media (min-width:786px) and (max-width: 996px) {
+
+  /*###############Container of the document#####################*/
+  .contenedor {
+    background-color: white;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 1fr 1fr 200px;
+    /*para cambiar el ancho*/
+    grid-template-rows: 800px auto auto;
+    grid-template-areas:
+      "header header header"
+      " content content content "
+      "footer footer footer";
+    /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
+    #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
+
+
+  }
+
+  /*
+    <!--####### ########## Here is  header ############# -->
+    ###################################################################################
+    */
+  .main-head {
+    grid-area: header;
+  }
+
+  /* Container of header */
+  .cuerpoheader {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 250px 600px;
+    grid-template-areas:
+      "prehead prehead busqueda"
+      "headlogo headtitulo headnav"
+      "headimage headimage headimage"
+  }
+
+  /* Button and input search for the web */
+  /*container*/
+  .busqueda {
+    grid-area: busqueda;
+    background-color: rgb(233, 215, 195);
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "buscar buttonbuscar";
+
+  }
+
+  .buttonbus {
+    grid-area: buttonbuscar;
+  }
+
+  .buscar {
+    grid-area: buscar;
+  }
+
+  .lupa {
+    width: 30px;
+    height: 30px;
+  }
+
+  .inputsearch {
+    height: 40px;
+    background: #0b5b5d;
+    color: #63717f;
+    padding-left: 10px;
+    border-radius: 15px;
+
+  }
+
+  .buttonbuscar {
+    background: #0b5b5d;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.7s;
+    height: 30px;
+    background-image: url(img/lupa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .buttonbuscar:hover {
+    letter-spacing: 3px;
+    background: rgb(175, 102, 102);
+    transition: all 0.6s ease 0s;
+  }
+
+
+  /* social network */
+
+  .prehead {
+    grid-area: prehead;
+    background-color: rgb(233, 215, 195);
+  }
+
+  .facebookc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .instagramc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .twiterc1 {
+
+    width: 35px;
+    height: 35px;
+  }
+
+  /* logo of de web */
+
+  .headlogo {
+    grid-area: headlogo;
+    background-color: #0097A7;
+  }
+
+  .logo1 {
+    position: absolute;
+    top: 0px;
+    bottom: 20px;
+    left: 0px;
+    height: 200px;
+
+  }
+
+  /* title */
+  .headtitulo {
+    grid-area: headtitulo;
+    background-color: #0097A7;
+  }
+
+  .titulo {
+    font-size: 50px;
+    font-family: cursive;
+    color: #f3e0e0;
+
+  }
+
+  /* navigation */
+
+  .headnav {
+    grid-area: headnav;
+    background-color: #0097A7;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 5px;
+
+  }
+
+  .item_menuhead {
+    flex: 0 1 100px;
+    list-style-type: none;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+
+  .menuhead li a {
+    transition: all .9s;
+    font-size: 20px;
+    color: rgb(195, 180, 197);
+  }
+
+  .menuhead li a:hover {
+    background-color: rgb(222, 160, 233);
+    color: white;
+    font-size: 20px;
+    border-color: #b65;
+  }
+
+  /* image and text of head */
+
+  .headimage {
+    grid-area: headimage;
+    background-image: url(https://cdn.windowsreport.com/wp-content/uploads/2017/10/background-slideshow-error-1200x675.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    /* filter: blur(6px);*/
+
+  }
+
+  /*una caja flex para el contenido del header ,recoge boton y texto*/
+  .caja1 {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .texto1 {
+    flex: 0 1 auto;
+    order: 0;
+    background-color: rgba(61, 61, 60, 0.609);
+    width: 50%;
+  }
+
+  .titulotexto {
+    font-size: 50px;
+  }
+
+  .bluebtn {
+    margin-top: 50px;
+    border: none;
+    background: #d064da;
+    color: #060707;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    flex: 0 1 50px;
+    width: 30%;
+    order: 0;
+    transition: all 0.3s ease 0s;
+    background-image: url(img/estudiar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .bluebtn:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.6s ease 0s;
+  }
+
+
+
+  /*
+    <!--##### ##########Aqui empieza Main ############# -->
+    ###################################################################################
+    */
+
+  /* container */
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 70px 1fr 900px;
+    grid-template-areas:
+      "primerasection primerasection primerasection"
+      "mainnav mainnav mainnav"
+      "tercerasection tercerasection tercerasection"
+      "cuartasection cuartasection cuartasection"
+  }
+
+  /* ***********+++First section++++************* */
+  .primerasection {
+    background-color: rgba(230, 222, 222, 0.808);
+    grid-area: primerasection;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      " textopri . "
+      "icono1 icono2 "
+      " icono3 . "
+      " . button3  "
+
+  }
+
+  .textopri {
+    grid-area: textopri;
+
+  }
+
+  .textopritext {
+    font-size: 45px;
+  }
+
+  .icono1 {
+    grid-area: icono1;
+
+  }
+
+  .icono2 {
+    grid-area: icono2;
+  }
+
+  .icono3 {
+    grid-area: icono3;
+  }
+
+  .aprende {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+
+  }
+
+  .practica,
+  .lee {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+  }
+
+  .button3 {
+    grid-area: button3;
+    background: #3ac4dd;
+    color: #f8f8f8;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    width: 70%;
+    transition: all 0.3s ease 0s;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .button3:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.7s ease 0s;
+  }
+
+  /* ***********+++Nav++++************* */
+
+
+  .mainnav {
+    grid-area: mainnav;
+  }
+
+  .menuvertical {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+  }
+
+  .item_menuvertical {
+    flex: 0 0 100px;
+    background-color: rgb(24, 240, 168);
+    list-style-type: none;
+    border: rgb(22, 129, 129) 2px solid;
+    padding: 6px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    height: 60px;
+  }
+
+  .menuvertical li a {
+    text-decoration: none;
+    width: 140px;
+    height: 30px;
+    transition: all .9s;
+    font-size: 16px;
+  }
+
+  .menuvertical li a:hover {
+    color: white;
+    font-size: 20px;
+  }
+
+  /* ***********+++Third Section++++************* */
+
+
+  .tercerasection {
+    grid-area: tercerasection;
+
+  }
+
+  .tercerasection {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-template-areas:
+      " textoter  "
+      "cajater1 "
+      " cajater2 "
+      "cajater3 "
+  }
+
+  /* Text */
+  .textoter {
+    grid-area: textoter;
+  }
+
+  .why {
+    font-size: 30px;
+    color: rgb(255, 71, 230);
+  }
+
+  /**** First card ******/
+  .cajater1 {
+    grid-area: cajater1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+    background-color: rgb(0, 128, 100);
+
+  }
+
+  .imgter1 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+
+  }
+
+  .cajater1:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .textoinclude1 {
+    flex: 0 1 100px;
+    order: 1;
+
+  }
+
+  /***** Second Card *******/
+  .cajater2 {
+    grid-area: cajater2;
+    background-color: rgb(24, 202, 113);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+
+  }
+
+  .cajater2:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .imgter2 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude2 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+  /********* Third Card *********/
+
+  .cajater3 {
+    grid-area: cajater3;
+    background-color: rgb(250, 102, 127);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+  }
+
+  .cajater3:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .imgter3 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude3 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+
+  /* ***********+++fourth Section++++************* */
+
+
+  .cuartasection {
+    grid-area: cuartasection;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+      " . sobre sobre "
+      " . cajacuar . ";
+    background-image: radial-gradient(circle, #e5aaa1, #c39a81, #9d8b6a, #787b5c, #576a53, #405f51, #2d5350, #1f474d,
+        #1b3e4e, #22334a, #2d2840, #341c31);
+  }
+
+  .sobre {
+    grid-area: sobre;
+    font-size: 90px;
+    color: rgb(7, 4, 7);
+  }
+
+  .cajacuar {
+    grid-area: cajacuar;
+    opacity: 0.8;
+    transition: 0.5s;
+    font-size: 20px;
+    color: #d1c7c7;
+
+
+  }
+
+  .cajacuar:hover {
+    opacity: 1;
+    color: #000000;
+    font-size: 23px;
+    transform: translateY(-30px);
+
+  }
+
+  /* #########################Sidebar########################################
+    ################################################################################### */
+  .side {
+    grid-area: side;
+    display: none;
+  }
+
+
+
+
+  /* #########################++FOOTER++########################################
+    ################################################################################### */
+  .footer {
+    grid-area: footer;
+    color: #fff;
+    background: #0097A7;
+
+  }
+
+  /* container */
+  .footer-container {
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo navigation secondary social"
+      "contact contact . novedades";
+  }
+
+
+  .footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " footer-container "
+      "buttom-line";
+  }
+
+  /* logo */
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .logo2 {
+    height: 250px;
+    width: 250px;
+
+    /* nav */
+  }
+
+  .footer-nav {
+    grid-area: navigation;
+    justify-self: center;
+    list-style: none;
+  }
+
+  .footer-secondary-nav {
+    grid-area: secondary;
+    list-style: none;
+    justify-self: center;
+  }
+
+  .social-networks {
+    grid-area: social;
+  }
+
+  .contact-block {
+    grid-area: contact;
+  }
+
+  .novedades {
+    grid-area: novedades;
+  }
+
+  /* socila network */
+  .social-networks {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+
+  .social-networks h3 {
+    grid-column: 1 / -1;
+  }
+
+  .facebook {
+    justify-self: right;
+
+  }
+
+  .facebookc {
+    width: 50px;
+    height: 50px;
+  }
+
+  .instagram {
+    justify-self: left;
+  }
+
+  .instagramc {
+    width: 50px;
+    height: 50px;
+  }
+
+  .twiterc {
+
+    width: 50px;
+    height: 50px;
+  }
+
+  /* contact */
+  .contact-block,
+  .novedades {
+    align-self: end;
+  }
+
+  .contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+  }
+
+  .contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+  }
+
+  .social-networks {
+    border-bottom: 2px solid #f99639;
+  }
+
+
+  /* Terms */
+  .buttom-line {
+    background-color: rgb(233, 215, 195);
+    grid-area: buttom-line;
+    color: #000000;
+  }
+
+  .legal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #000000;
+
+  }
+
+  .novedades-text,
+  .text-input {
+    text-align: center;
+  }
+
+  .text-input input {
+    border-radius: 25px;
+  }
+
+  .text-input input:first-child {
+    height: 2rem;
+  }
+
+  .text-input input:last-child {
+    height: 35px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    background-color: #f99639;
+    width: 100px;
+    font-weight: bold;
+  }
+
+  .novedades-text icon,
+  .novedades-text p {
+    margin: 0 0 1.1rem;
+  }
+
+  .novedades-text p {
+    line-height: 2rem;
+  }
+
+  .footer a {
+    color: rgb(218, 195, 195);
+  }
+}
+
+
+
+
+
+/*################################################################
+###################################################################################
+######################################################################################
+################################################################################
+###############################################################################
+##########################################################################*/
+
+@media (min-width: 576px) and (max-width: 786px) {
+
+  /*###############Container of the document#####################*/
+  .contenedor {
+    background-color: white;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: 650px auto auto;
+    grid-template-areas:
+      "header "
+      "content"
+      "footer ";
+    /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
+    #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
+
+
+  }
+
+  /*
+    <!--####### ########## Here is  header ############# -->
+    ###################################################################################
+    */
+  .main-head {
+    grid-area: header;
+  }
+
+  /* Container of header */
+  .cuerpoheader {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 100px 600px;
+    grid-template-areas:
+      "prehead  busqueda"
+      "headlogo headnav"
+      "headimage headimage"
+  }
+
+  /* Button and input search for the web */
+  /*container*/
+  .busqueda {
+    grid-area: busqueda;
+    background-color: rgb(233, 215, 195);
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 130px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "buscar buttonbuscar";
+
+  }
+
+  .buttonbus {
+    grid-area: buttonbuscar;
+  }
+
+  .buscar {
+    grid-area: buscar;
+  }
+
+  .lupa {
+    width: 30px;
+    height: 30px;
+  }
+
+  .inputsearch {
+    height: 30px;
+    width: 200px;
+    background: #0b5b5d;
+    color: #63717f;
+    border-radius: 15px;
+
+
+  }
+
+  .buttonbuscar {
+    background: #0b5b5d;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.7s;
+    height: 30px;
+    border-radius: 15px;
+  }
+
+  .buttonbuscar:hover {
+    letter-spacing: 3px;
+    background: rgb(175, 102, 102);
+    transition: all 0.6s ease 0s;
+  }
+
+
+  /* social network */
+
+  .prehead {
+    grid-area: prehead;
+    background-color: rgb(233, 215, 195);
+  }
+
+  .facebookc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .instagramc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .twiterc1 {
+
+    width: 35px;
+    height: 35px;
+  }
+
+  /* logo of de web */
+
+  .headlogo {
+    grid-area: headlogo;
+    background-color: #0097A7;
+  }
+
+  .logo1 {
+    position: absolute;
+    top: 0px;
+    bottom: 20px;
+    left: 0px;
+    height: 200px;
+
+  }
+
+  /* title */
+  .headtitulo {
+    grid-area: headtitulo;
+    background-color: #0097A7;
+  }
+
+  .titulo {
+    display: none;
+
+  }
+
+  /* navigation */
+
+  .headnav {
+    grid-area: headnav;
+    background-color: #0097A7;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 5px;
+
+  }
+
+  .item_menuhead {
+    flex: 0 1 100px;
+    list-style-type: none;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+
+  .menuhead li a {
+    transition: all .9s;
+    font-size: 20px;
+    color: rgb(195, 180, 197);
+  }
+
+  .menuhead li a:hover {
+    background-color: rgb(222, 160, 233);
+    color: white;
+    font-size: 25px;
+    border-color: #b65;
+  }
+
+  /* image and text of head */
+
+  .headimage {
+    grid-area: headimage;
+    background-image: url(https://cdn.windowsreport.com/wp-content/uploads/2017/10/background-slideshow-error-1200x675.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    /* filter: blur(6px);*/
+
+  }
+
+  /*una caja flex para el contenido del header ,recoge boton y texto*/
+  .caja1 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .texto1 {
+    flex: 0 1 auto;
+    order: 0;
+    background-color: rgba(61, 61, 60, 0.609);
+    width: 90%;
+  }
+
+  .titulotexto {
+    font-size: 50px;
+  }
+
+  .bluebtn {
+    margin-top: 50px;
+    border: none;
+    background: #d064da;
+    color: #060707;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    flex: 0 1 50px;
+    width: 30%;
+    order: 0;
+    transition: all 0.3s ease 0s;
+    background-image: url(img/estudiar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .bluebtn:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.6s ease 0s;
+  }
+
+
+
+  /*
+    <!--##### ##########Aqui empieza Main ############# -->
+    ###################################################################################
+    */
+
+  /* container */
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: 1fr 70px 1fr 900px;
+    grid-template-areas:
+      "primerasection  primerasection "
+      "mainnav mainnav"
+      " tercerasection tercerasection"
+      "cuartasection cuartasection "
+  }
+
+  /* ***********+++First section++++************* */
+  .primerasection {
+    background-color: rgba(230, 222, 222, 0.808);
+    grid-area: primerasection;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      " textopri  "
+      "icono1 "
+      " icono2 "
+      " icono3"
+      " button3  "
+
+  }
+
+  .textopri {
+    grid-area: textopri;
+
+  }
+
+  .textopritext {
+    font-size: 45px;
+  }
+
+  .icono1 {
+    grid-area: icono1;
+
+  }
+
+  .icono2 {
+    grid-area: icono2;
+  }
+
+  .icono3 {
+    grid-area: icono3;
+  }
+
+  .aprende {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+
+  }
+
+  .practica,
+  .lee {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+  }
+
+  .button3 {
+    grid-area: button3;
+    background: #3ac4dd;
+    color: #f8f8f8;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    width: 90%;
+    transition: all 0.3s ease 0s;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .button3:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.7s ease 0s;
+  }
+
+  /* ***********+++Nav++++************* */
+
+
+  .mainnav {
+    grid-area: mainnav;
+  }
+
+  .menuvertical {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+
+  }
+
+  .item_menuvertical {
+    flex: 0 0 100px;
+    background-color: rgb(24, 240, 168);
+    list-style-type: none;
+    border: rgb(22, 129, 129) 2px solid;
+    padding: 6px;
+    text-transform: uppercase;
+    width: 150px;
+  }
+
+  .menuvertical li a {
+    text-decoration: none;
+    width: 140px;
+    height: 30px;
+    transition: all .9s;
+    font-size: 16px;
+  }
+
+  .menuvertical li a:hover {
+    color: white;
+    font-size: 20px;
+  }
+
+  /* ***********+++Third Section++++************* */
+
+
+  .tercerasection {
+    grid-area: tercerasection;
+
+  }
+
+  .tercerasection {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 500px;
+    grid-template-areas:
+      "textoter  "
+      "cajater1 "
+      "cajater2 "
+      "cajater3"
+
+  }
+
+  /* Text */
+  .textoter {
+    grid-area: textoter;
+  }
+
+  .why {
+    font-size: 30px;
+    color: rgb(255, 71, 230);
+  }
+
+  /**** First card ******/
+  .cajater1 {
+    grid-area: cajater1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+    background-color: rgb(0, 128, 100);
+
+  }
+
+  .imgter1 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+
+  }
+
+  .cajater1:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .textoinclude1 {
+    flex: 0 1 100px;
+    order: 1;
+
+  }
+
+  /***** Second Card *******/
+  .cajater2 {
+    grid-area: cajater2;
+    background-color: rgb(24, 202, 113);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+
+  }
+
+  .cajater2:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .imgter2 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude2 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+  /********* Third Card *********/
+
+  .cajater3 {
+    grid-area: cajater3;
+    background-color: rgb(250, 102, 127);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+  }
+
+  .cajater3:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .imgter3 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude3 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+
+  /* ***********+++fourth Section++++************* */
+
+
+  .cuartasection {
+    grid-area: cuartasection;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+      " sobre sobre "
+      " cajacuar . ";
+    background-image: radial-gradient(circle, #e5aaa1, #c39a81, #9d8b6a, #787b5c, #576a53, #405f51, #2d5350, #1f474d,
+        #1b3e4e, #22334a, #2d2840, #341c31);
+  }
+
+  .sobre {
+    grid-area: sobre;
+    font-size: 90px;
+    color: rgb(7, 4, 7);
+  }
+
+  .cajacuar {
+    grid-area: cajacuar;
+    opacity: 0.8;
+    transition: 0.5s;
+    font-size: 20px;
+    color: #d1c7c7;
+
+
+  }
+
+  .cajacuar:hover {
+    opacity: 1;
+    color: #000000;
+    font-size: 23px;
+    transform: translateY(-30px);
+
+  }
+
+  /* #########################Sidebar########################################
+    ################################################################################### */
+  .side {
+    display: none;
+  }
+
+
+
+  /* #########################++FOOTER++########################################
+    ################################################################################### */
+  .footer {
+    grid-area: footer;
+    color: #fff;
+    background: #0097A7;
+
+  }
+
+  /* container */
+  .footer-container {
+    padding: 3em 0;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto auto auto;
+    grid-template-areas:
+      "logo "
+      "social"
+      "contact"
+      "novedades";
+  }
+
+
+  .footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " footer-container "
+      "buttom-line";
+  }
+
+  /* logo */
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .logo2 {
+    height: 160px;
+    width: 160px;
+
+    /* nav */
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-secondary-nav {
+    display: none;
+  }
+
+  .social-networks {
+    grid-area: social;
+  }
+
+  .contact-block {
+    grid-area: contact;
+  }
+
+  .novedades {
+    grid-area: novedades;
+  }
+
+  /* socila network */
+  .social-networks {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+
+  .social-networks h3 {
+    grid-column: 1 / -1;
+  }
+
+  .facebook {
+    justify-self: right;
+
+  }
+
+  .facebookc {
+    width: 40px;
+    height: 40px;
+  }
+
+  .instagram {
+    justify-self: left;
+  }
+
+  .instagramc {
+    width: 30px;
+    height: 30px;
+  }
+
+  .twiterc {
+
+    width: 40px;
+    height: 40px;
+  }
+
+  /* contact */
+  .contact-block,
+  .novedades {
+    align-self: end;
+  }
+
+  .contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+  }
+
+  .contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+  }
+
+  .social-networks {
+    border-bottom: 2px solid #f99639;
+  }
+
+
+  /* Terms */
+  .buttom-line {
+    background-color: rgb(233, 215, 195);
+    grid-area: buttom-line;
+    color: #000000;
+  }
+
+  .legal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #000000;
+
+  }
+
+  .novedades-text,
+  .text-input {
+    text-align: center;
+  }
+
+  .text-input input {
+    border-radius: 25px;
+  }
+
+  .text-input input:first-child {
+    height: 2rem;
+  }
+
+  .text-input input:last-child {
+    height: 35px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    background-color: #f99639;
+    width: 100px;
+    font-weight: bold;
+  }
+
+  .novedades-text icon,
+  .novedades-text p {
+    margin: 0 0 1.1rem;
+  }
+
+  .novedades-text p {
+    line-height: 2rem;
+  }
+
+  .footer a {
+    color: rgb(218, 195, 195);
+  }
+}
+
+
+
+
+
+/*################################################################
+###################################################################################
+######################################################################################
+################################################################################
+###############################################################################
+##########################################################################*/
+
+@media (max-width: 576px) {
+
+  /*###############Container of the document#####################*/
+  .contenedor {
+    background-color: white;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: 650px auto auto;
+    grid-template-areas:
+      "header "
+      "content"
+      "footer ";
+    /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
+    #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
+
+
+  }
+
+  /*
+    <!--####### ########## Here is  header ############# -->
+    ###################################################################################
+    */
+  .main-head {
+    grid-area: header;
+  }
+
+  /* Container of header */
+  .cuerpoheader {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 100px 600px;
+    grid-template-areas:
+      "prehead  busqueda"
+      "headlogo headnav"
+      "headimage headimage"
+  }
+
+  /* Button and input search for the web */
+  /*container*/
+  .busqueda {
+    grid-area: busqueda;
+    background-color: rgb(233, 215, 195);
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 130px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "buscar buttonbuscar";
+
+  }
+
+  .buttonbus {
+    grid-area: buttonbuscar;
+  }
+
+  .buscar {
+    grid-area: buscar;
+  }
+
+  .lupa {
+    width: 30px;
+    height: 30px;
+  }
+
+  .inputsearch {
+    height: 30px;
+    width: 200px;
+    background: #0b5b5d;
+    color: #63717f;
+    border-radius: 15px;
+
+
+  }
+
+  .buttonbuscar {
+    background: #0b5b5d;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.7s;
+    height: 30px;
+    border-radius: 15px;
+  }
+
+  .buttonbuscar:hover {
+    letter-spacing: 3px;
+    background: rgb(175, 102, 102);
+    transition: all 0.6s ease 0s;
+  }
+
+
+  /* social network */
+
+  .prehead {
+    grid-area: prehead;
+    background-color: rgb(233, 215, 195);
+  }
+
+  .facebookc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .instagramc1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .twiterc1 {
+
+    width: 35px;
+    height: 35px;
+  }
+
+  /* logo of de web */
+
+  .headlogo {
+    grid-area: headlogo;
+    background-color: #0097A7;
+  }
+
+  .logo1 {
+    position: absolute;
+    top: 0px;
+    bottom: 20px;
+    left: 0px;
+    height: 200px;
+
+  }
+
+  /* title */
+  .headtitulo {
+    grid-area: headtitulo;
+    background-color: #0097A7;
+  }
+
+  .titulo {
+    display: none;
+
+  }
+
+  /* navigation */
+
+  .headnav {
+    grid-area: headnav;
+    background-color: #0097A7;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 5px;
+
+  }
+
+  .item_menuhead {
+    flex: 0 1 100px;
+    list-style-type: none;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+
+  .menuhead li a {
+    transition: all .9s;
+    font-size: 20px;
+    color: rgb(195, 180, 197);
+  }
+
+  .menuhead li a:hover {
+    background-color: rgb(222, 160, 233);
+    color: white;
+    font-size: 25px;
+    border-color: #b65;
+  }
+
+  /* image and text of head */
+
+  .headimage {
+    grid-area: headimage;
+    background-image: url(https://cdn.windowsreport.com/wp-content/uploads/2017/10/background-slideshow-error-1200x675.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    /* filter: blur(6px);*/
+
+  }
+
+  /*una caja flex para el contenido del header ,recoge boton y texto*/
+  .caja1 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .texto1 {
+    flex: 0 1 auto;
+    order: 0;
+    background-color: rgba(61, 61, 60, 0.609);
+    width: 90%;
+  }
+
+  .titulotexto {
+    font-size: 50px;
+  }
+
+  .bluebtn {
+    margin-top: 50px;
+    border: none;
+    background: #d064da;
+    color: #060707;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    flex: 0 1 50px;
+    width: 30%;
+    order: 0;
+    transition: all 0.3s ease 0s;
+    background-image: url(img/estudiar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  }
+
+  .bluebtn:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.6s ease 0s;
+  }
+
+
+
+  /*
+    <!--##### ##########Aqui empieza Main ############# -->
+    ###################################################################################
+    */
+
+  /* container */
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: 1fr 70px 1fr 900px;
+    grid-template-areas:
+      "primerasection  primerasection "
+      "mainnav mainnav"
+      " tercerasection tercerasection"
+      "cuartasection cuartasection "
+  }
+
+  /* ***********+++First section++++************* */
+  .primerasection {
+    background-color: rgba(230, 222, 222, 0.808);
+    grid-area: primerasection;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      " textopri  "
+      "icono1 "
+      " icono2 "
+      " icono3"
+      " button3  "
+
+  }
+
+  .textopri {
+    grid-area: textopri;
+
+  }
+
+  .textopritext {
+    font-size: 45px;
+  }
+
+  .icono1 {
+    grid-area: icono1;
+
+  }
+
+  .icono2 {
+    grid-area: icono2;
+  }
+
+  .icono3 {
+    grid-area: icono3;
+  }
+
+  .aprende {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+
+  }
+
+  .practica,
+  .lee {
+    width: 200px;
+    height: 200px;
+    margin-left: 30%;
+  }
+
+  .button3 {
+    grid-area: button3;
+    background: #3ac4dd;
+    color: #f8f8f8;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    width: 90%;
+    transition: all 0.3s ease 0s;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .button3:hover {
+    color: #bd5e5e;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.7s ease 0s;
+  }
+
+  /* ***********+++Nav++++************* */
+
+
+  .mainnav {
+    grid-area: mainnav;
+  }
+
+  .menuvertical {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+
+  }
+
+  .item_menuvertical {
+    flex: 0 0 100px;
+    background-color: rgb(24, 240, 168);
+    list-style-type: none;
+    border: rgb(22, 129, 129) 2px solid;
+    padding: 6px;
+    text-transform: uppercase;
+    width: 150px;
+  }
+
+  .menuvertical li a {
+    text-decoration: none;
+    width: 140px;
+    height: 30px;
+    transition: all .9s;
+    font-size: 16px;
+  }
+
+  .menuvertical li a:hover {
+    color: white;
+    font-size: 20px;
+  }
+
+  /* ***********+++Third Section++++************* */
+
+
+  .tercerasection {
+    grid-area: tercerasection;
+
+  }
+
+  .tercerasection {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 500px;
+    grid-template-areas:
+      "textoter  "
+      "cajater1 "
+      "cajater2 "
+      "cajater3"
+
+  }
+
+  /* Text */
+  .textoter {
+    grid-area: textoter;
+  }
+
+  .why {
+    font-size: 30px;
+    color: rgb(255, 71, 230);
+  }
+
+  /**** First card ******/
+  .cajater1 {
+    grid-area: cajater1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+    background-color: rgb(0, 128, 100);
+
+  }
+
+  .imgter1 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+
+  }
+
+  .cajater1:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .textoinclude1 {
+    flex: 0 1 100px;
+    order: 1;
+
+  }
+
+  /***** Second Card *******/
+  .cajater2 {
+    grid-area: cajater2;
+    background-color: rgb(24, 202, 113);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+
+  }
+
+  .cajater2:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .imgter2 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude2 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+  /********* Third Card *********/
+
+  .cajater3 {
+    grid-area: cajater3;
+    background-color: rgb(250, 102, 127);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: rgba(102, 51, 153, 0);
+    border: black solid 2px;
+  }
+
+  .cajater3:hover {
+    opacity: 1;
+    color: #e9eaec;
+    background: #333;
+    transform: translateY(5px);
+
+  }
+
+  .imgter3 {
+    flex: 0 1 100px;
+    order: 0;
+    width: 250px;
+    margin-left: 60px;
+  }
+
+  .textoinclude3 {
+    flex: 0 1 100px;
+    order: 1;
+  }
+
+
+  /* ***********+++fourth Section++++************* */
+
+
+  .cuartasection {
+    grid-area: cuartasection;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+      " sobre sobre "
+      " cajacuar . ";
+    background-image: radial-gradient(circle, #e5aaa1, #c39a81, #9d8b6a, #787b5c, #576a53, #405f51, #2d5350, #1f474d,
+        #1b3e4e, #22334a, #2d2840, #341c31);
+  }
+
+  .sobre {
+    grid-area: sobre;
+    font-size: 90px;
+    color: rgb(7, 4, 7);
+  }
+
+  .cajacuar {
+    grid-area: cajacuar;
+    opacity: 0.8;
+    transition: 0.5s;
+    font-size: 20px;
+    color: #d1c7c7;
+
+
+  }
+
+  .cajacuar:hover {
+    opacity: 1;
+    color: #000000;
+    font-size: 23px;
+    transform: translateY(-30px);
+
+  }
+
+  /* #########################Sidebar########################################
+    ################################################################################### */
+  .side {
+    display: none;
+  }
+
+
+
+  /* #########################++FOOTER++########################################
+    ################################################################################### */
+  .footer {
+    grid-area: footer;
+    color: #fff;
+    background: #0097A7;
+
+  }
+
+  /* container */
+  .footer-container {
+    padding: 3em 0;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto auto auto;
+    grid-template-areas:
+      "logo "
+      "social"
+      "contact"
+      "novedades";
+  }
+
+
+  .footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " footer-container "
+      "buttom-line";
+  }
+
+  /* logo */
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .logo2 {
+    height: 160px;
+    width: 160px;
+
+    /* nav */
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-secondary-nav {
+    display: none;
+  }
+
+  .social-networks {
+    grid-area: social;
+  }
+
+  .contact-block {
+    grid-area: contact;
+  }
+
+  .novedades {
+    grid-area: novedades;
+  }
+
+  /* socila network */
+  .social-networks {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+
+  .social-networks h3 {
+    grid-column: 1 / -1;
+  }
+
+  .facebook {
+    justify-self: right;
+
+  }
+
+  .facebookc {
+    width: 40px;
+    height: 40px;
+  }
+
+  .instagram {
+    justify-self: left;
+  }
+
+  .instagramc {
+    width: 30px;
+    height: 30px;
+  }
+
+  .twiterc {
+
+    width: 40px;
+    height: 40px;
+  }
+
+  /* contact */
+  .contact-block,
+  .novedades {
+    align-self: end;
+  }
+
+  .contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+  }
+
+  .contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+  }
+
+  .social-networks {
+    border-bottom: 2px solid #f99639;
+  }
+
+
+  /* Terms */
+  .buttom-line {
+    background-color: rgb(233, 215, 195);
+    grid-area: buttom-line;
+    color: #000000;
+  }
+
+  .legal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #000000;
+
+  }
+
+  .novedades-text,
+  .text-input {
+    text-align: center;
+  }
+
+  .text-input input {
+    border-radius: 25px;
+  }
+
+  .text-input input:first-child {
+    height: 2rem;
+  }
+
+  .text-input input:last-child {
+    height: 35px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    background-color: #f99639;
+    width: 100px;
+    font-weight: bold;
+  }
+
+  .novedades-text icon,
+  .novedades-text p {
+    margin: 0 0 1.1rem;
+  }
+
+  .novedades-text p {
+    line-height: 2rem;
+  }
+
+  .footer a {
+    color: rgb(218, 195, 195);
+  }
+}
