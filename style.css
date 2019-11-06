@@ -64,7 +64,6 @@
 .buttonbuscar {
   background: #0b5b5d;
   padding: 20px;
-  text-transform: uppercase;
   border-radius: 6px;
   transition: 0.7s;
   height: 30px;
@@ -74,6 +73,7 @@
   background-size: 30px;
   background-position-x: right;
   border-radius: 15px;
+  
 }
 
 .buttonbuscar:hover {
@@ -1039,7 +1039,7 @@
   /*###############Container of the document#####################*/
   .contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: 650px auto auto;
+    grid-template-rows: 780px auto auto;
     grid-template-areas:
       "header "
       "content"
@@ -1052,31 +1052,32 @@
     */
   .main-head {
     grid-area: header;
+   
   }
 
   /* Container of header */
   .cuerpoheader {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 100px 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 60px 600px;
     grid-template-areas:
-      "prehead  busqueda"
-      "headlogo headnav"
-      "headimage headimage"
+      "busqueda"
+      "headlogo"
+      " headnav"
+      "headimage";
   }
-.facebookc1{
-  visibility: hidden;
-}
-.instagramc1{
-  visibility: hidden;
-}
-.twiterc1{
-  visibility: hidden;
-}
+  .prehead {
+    grid-area: prehead;
+   display: none;
+  }
+  
+
 
   /* logo of de web */
   .logo1 {
-    height: 180px;
+    height: 100px;
+    margin-top: 25px;
   }
+ 
 
   /* title */
   .titulo {
@@ -1120,7 +1121,7 @@
   /* container */
 
   .content {
-    margin: 20px;
+    margin: 10px;
     grid-gap: 20px;
     grid-template-columns: 140px 1fr;
     grid-template-rows: 1300px auto 1fr 900px;
@@ -1141,13 +1142,39 @@
       "icono1 "
       " icono2 "
       " icono3"
-      " button3  "
+      " button3  ";
+  
 
   }
-  .button3{
-    width: 260px;
+ 
+  .button3 {
+    width: 220px;
+    height: 70px;
   }
-
+  .icono3 :last-child{
+    margin-right:15px;
+    font-size:15px;
+ 
+  }
+  .icono1 :last-child{
+    margin-right:15px;
+    font-size:15px;
+  }
+  .icono2 :last-child{
+    margin-right:15px;
+    font-size:15px;
+  }
+  .lee{
+    width: 150px;
+    height: 150px;
+  }
+  .aprende{
+    width: 150px;
+    height: 150px;
+  }
+  .practica{
+    width: 150px;
+    height: 150px;}
   /* ***********+++Nav++++************* */
 
   .item_menuvertical {
@@ -1186,7 +1213,7 @@
   /**** First card ******/
   .imgter1 {
     width: 200px;
-    margin-left: 100px;
+    margin-left: 50px;
 
   }
 
@@ -1204,7 +1231,7 @@
 
   .imgter2 {
     width: 200px;
-    margin-left: 100px;
+    margin-left: 50px;
 
   }
 
@@ -1220,7 +1247,7 @@
 
   .imgter3 {
     width: 200px;
-    margin-left: 100px;
+    margin-left: 50px;
 
   }
 
@@ -1235,12 +1262,12 @@
   }
 
   .imagcuar4 {
-    width: 22em;
+    width: 100%;
 
   }
 
   .sobre {
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .cajacuar {
@@ -1318,15 +1345,12 @@
     height: 40px;
   }
 
-  /* contact */
+/* contact */
   .contact-block {
-    margin-left: 130px;
+margin-left: 10px;
   }
-
-
-
   .contact-block a {
-    width: 50%;
+    width: 90%;
 
   }
 }
