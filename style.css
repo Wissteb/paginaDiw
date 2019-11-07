@@ -851,12 +851,12 @@
 
   /*###############Container of the document#####################*/
   .contenedor {
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr;
     grid-template-rows: 600px auto auto;
     grid-template-areas:
-      "header header header"
-      " content content content "
-      "footer footer footer";
+      "header  "
+      " content "
+      "footer  ";
   }
 
   /*
@@ -925,9 +925,21 @@
     */
   /* container */
   .content {
-    margin: 50px;
+    margin:30px;
   }
-
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 90px 1fr 900px;
+    grid-template-areas:
+      "primerasection "
+      "mainnav "
+      "tercerasection tercerasection tercerasection"
+      "cuartasection cuartasection cuartasection"
+  }
+  
   /* ***********+++First section++++************* */
   .primerasection {
     grid-template-columns: auto;
