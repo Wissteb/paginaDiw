@@ -8,24 +8,21 @@
 
 /* For Desktop */
 /*############################################################################
-#############################################################################
-############################################################################
 ############################################################################*/
 /*###############Container of the document#####################*/
 .contenedor {
   background-color: white;
   display: grid;
   grid-gap: 100px;
-  grid-template-columns: 1fr 1fr 200px;
+  grid-template-columns: 1fr 200px;
   /*para cambiar el ancho*/
   grid-template-rows: 1000px auto auto;
   grid-template-areas:
-    "header header header"
-    " content content side "
-    "footer footer footer";
+    "header header"
+    " content side "
+    "footer footer";
   /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
   #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
-
 }
 
 /*
@@ -781,11 +778,12 @@
   /*###############Container of the document#####################*/
   .contenedor {
     grid-template-rows: 1000px auto 300px 1fr;
+    grid-template-columns: 100%;
     grid-template-areas:
-      "header header header"
-      " content content content"
-      " side side side"
-      "footer footer footer";
+      "header "
+      " content"
+      " side"
+      "footer";
   }
 
   /*
