@@ -259,8 +259,7 @@
   grid-area: primerasection;
 
 }
-
-.contenedorprimera {
+.contenedorprimera{
   display: flex;
   flex-direction: row;
 }
@@ -268,9 +267,8 @@
 .textopritext {
   font-size: 45px;
 }
-
 .icono1 {
-  flex: 1 1 auto;
+flex: 1 1 auto;
 
 }
 
@@ -307,7 +305,7 @@
   height: 50px;
   border-radius: 15px;
   margin-top: 50px;
-
+  
 }
 
 .button3:hover {
@@ -372,7 +370,7 @@
 
 }
 
-.contenedorter {
+.contenedorter{
   display: grid;
   grid-gap: 0px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -380,7 +378,6 @@
   grid-template-areas:
     "cajater1 cajater2 cajater3"
 }
-
 /* Text */
 .why {
   font-size: 30px;
@@ -499,7 +496,7 @@
   font-size: 90px;
   color: rgb(7, 4, 7);
   margin-bottom: 30px;
-
+  
 }
 
 .cajacuar {
@@ -514,7 +511,6 @@
 
 
 }
-
 .cajacuar:hover {
   opacity: 1;
   color: #000000;
@@ -522,15 +518,13 @@
   transform: translateY(-30px);
 
 }
-
-.imagcuar4 {
-  flex: 1 1 100px;
-  width: 600px;
+.imagcuar4{
+flex: 1 1 100px ;
+width: 600px;
 
 }
-
-.textoabout {
-  text-align: center;
+.textoabout{
+text-align: center;
 }
 
 /* #########################Sidebar########################################
@@ -581,18 +575,18 @@
 
 /* container */
 .footer-container {
-  color: #fff;
+ color: #fff;
   background: #0097A7;
-  grid-area: footer;
+ grid-area: footer;
   padding: 3em 0;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 3fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "logo navigation secondary social"
+  grid-template-rows: auto auto ;
+  grid-template-areas: 
+  "logo navigation secondary social"
     "contact contact . novedades";
 
-
+    
 }
 
 /* logo */
@@ -633,24 +627,21 @@
 
 /* socila network */
 .social-networks {
-  text-align: center;
+text-align: center;
 }
 
 .facebookc {
   width: 50px;
   height: 50px;
 }
-
 .instagramc {
   width: 50px;
   height: 50px;
 }
-
 .twiterc {
   width: 50px;
   height: 50px;
 }
-
 /* contact */
 .contact-block,
 .novedades {
@@ -750,7 +741,7 @@
   /* container */
 
   .content {
-    grid-template-rows: 600px 1fr 70px 1fr 900px;
+    grid-template-rows:600px 1fr 70px 1fr 900px;
     margin: 5px;
   }
 
@@ -826,12 +817,7 @@
 
   /* Container of header */
   .cuerpoheader {
-    grid-gap: 0px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 100px;
-    grid-template-areas:
-      "prehead  busqueda"
-      "headlogo  headnav"
+    grid-template-rows: auto 80px auto;
   }
 
   .caja1 {
@@ -857,13 +843,11 @@
   .logo1 {
     height: 150px;
     width: 150px;
-    margin-top: 20px;
   }
 
   /* title */
   .titulo {
     font-size: 30px;
-    display: none;
   }
 
   /* navigation */
@@ -894,7 +878,7 @@
   }
 
   .content {
-    grid-template-rows: 500px 600px auto auto;
+    grid-template-rows: 400px 500px auto auto;
     grid-template-areas:
       "headimage "
       "primerasection "
@@ -907,6 +891,21 @@
   .button3 {
     width: 250px;
     height: 70px;
+  }
+
+  .icono3 :last-child {
+
+    font-size: 15px;
+  }
+
+  .icono1 :last-child {
+
+    font-size: 15px;
+  }
+
+  .icono2 :last-child {
+
+    font-size: 15px;
   }
 
   .lee {
@@ -959,10 +958,6 @@
   }
 
   /* ***********+++fourth Section++++************* */
-  .imagcuar4 {
-    width: 400px;
-  }
-
   /* #########################Sidebar########################################
     ################################################################################### */
   .side {
@@ -974,12 +969,6 @@
     ################################################################################### */
   /*Footer*/
   /* nav */
-  .footer-container {
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "logo social"
-      "contact  novedades";
-  }
 
 
   .footer-nav {
@@ -1003,7 +992,6 @@
 
   /*###############Container of the document#####################*/
   .contenedor {
-    grid-gap: 0px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
@@ -1023,12 +1011,12 @@
 
   /* Container of header */
   .cuerpoheader {
-    grid-gap: 0px;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 50px 60px 600px;
     grid-template-areas:
       "busqueda"
-      " headnav";
+      " headnav"
+      "headimage";
   }
 
   .prehead {
@@ -1042,7 +1030,6 @@
   .logo1 {
     height: 100px;
     margin-top: 25px;
-    display: none;
   }
 
 
@@ -1064,9 +1051,9 @@
   }
 
   /*una caja flex para el contenido del header ,recoge boton y texto*/
-  /* .caja1 {
+  .caja1 {
     margin-top: 20px;
-  } */
+  }
 
   .texto1 {
     width: 90%;
@@ -1089,42 +1076,38 @@
 
   .content {
     margin: 10px;
-    grid-template-rows: 500px auto auto auto;
-    grid-template-columns: auto;
+    grid-gap: 20px;
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas:
-      "headimage "
-      "primerasection "
-      "mainnav "
-      "tercerasection "
-      "cuartasection "
+    "headimage "
+    "primerasection"
+    "mainnav "
+    "tercerasection"
+    "cuartasection"
+}
   }
 
   /* ***********+++First section++++************* */
-  .contenedorprimera {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .icono1 {
-    flex: 1 1 50px;
-    width: 500px;
-
-  }
-
-  .icono2 {
-    flex: 1 1 50px;
-    width: 500px;
-  }
-
-  .icono3 {
-    flex: 1 1 50px;
-    width: 500px;
-  }
-
   .button3 {
     width: 220px;
     height: 70px;
+  }
+
+  .icono3 :last-child {
+    margin-right: 15px;
+    font-size: 15px;
+
+  }
+
+  .icono1 :last-child {
+    margin-right: 15px;
+    font-size: 15px;
+  }
+
+  .icono2 :last-child {
+    margin-right: 15px;
+    font-size: 15px;
   }
 
   .lee {
@@ -1168,8 +1151,9 @@
   .contenedorter {
     grid-template-columns: 1fr;
     grid-gap: 5px;
-    grid-template-rows: auto repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
+ 
       "cajater1 "
       "cajater2 "
       "cajater3"
@@ -1204,6 +1188,7 @@
 
   /********* Third Card *********/
 
+
   .cajater3:hover {
 
     transform: translateY(5px);
@@ -1217,15 +1202,29 @@
   }
 
   /* ***********+++fourth Section++++************* */
+  .cuartasection {
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      " sobre "
+      " cajacuar ";
+
+  }
 
   .imagcuar4 {
-    width: 400px;
+    width: 100%;
 
   }
 
   .sobre {
     font-size: 40px;
   }
+
+  .cajacuar {
+    justify-content: center;
+    margin-left: 20px;
+  }
+
 
   /* #########################Sidebar########################################
     ################################################################################### */
@@ -1247,6 +1246,16 @@
       "social"
       "contact"
       "novedades";
+  }
+
+  .footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " footer-container "
+      "buttom-line";
   }
 
   /* logo */
