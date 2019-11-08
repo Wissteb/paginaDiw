@@ -5,7 +5,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 19px;
 }
-
 /* For Desktop */
 /*############################################################################
 ############################################################################*/
@@ -24,7 +23,6 @@
   /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
   #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
 }
-
 /*
   <!--####### ########## Here is  header ############# -->
   ###################################################################################
@@ -43,7 +41,6 @@
     "prehead prehead busqueda"
     "headlogo headtitulo headnav"
 }
-
 /* Button and input search for the web */
 /*container*/
 .busqueda {
