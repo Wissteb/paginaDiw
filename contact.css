@@ -1,0 +1,515 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 19px;
+  }
+  /* For Desktop */
+  /*############################################################################
+  ############################################################################*/
+  /*###############Container of the document#####################*/
+  .contenedor {
+    background-color: white;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    /*para cambiar el ancho*/
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header "
+      "content "
+      "footer ";
+    /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
+    #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
+  }
+  /*
+    <!--####### ########## Here is  header ############# -->
+    ###################################################################################
+    */
+  .main-head {
+    grid-area: header;
+  }
+  
+  /* Container of header */
+  .cuerpoheader{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+      "prehead prehead busqueda"
+      "headlogo headtitulo headnav"
+  }
+  /* Button and input search for the web */
+  /*container*/
+  .busqueda {
+    grid-area: busqueda;
+    background-color: rgb(233, 215, 195);
+  }
+
+ .lupa {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .buttonbuscar {
+    background: #0b5b5d;
+    padding: 20px;
+    border-radius: 6px;
+    transition: 0.7s;
+    height: 30px;
+    background-image: url(img/lupa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+ 
+  }
+  
+  .buttonbuscar:hover {
+    letter-spacing: 3px;
+    background: rgb(175, 102, 102);
+    transition: all 0.6s ease 0s;
+  }
+  
+
+  /* social network */
+  
+  .prehead {
+    grid-area: prehead;
+    background-color: rgb(233, 215, 195);
+  }
+  
+  .facebookc1 {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .instagramc1 {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .twiterc1 {
+  
+    width: 35px;
+    height: 35px;
+  }
+  
+  /* logo of de web */
+  
+  .headlogo {
+    grid-area: headlogo;
+    background-color: #0097A7;
+  }
+  
+  .logo1 {
+    position: absolute;
+    top: 0px;
+    bottom: 20px;
+    left: 0px;
+    height: 240px;
+  
+  }
+  
+  /* title */
+  .headtitulo {
+    grid-area: headtitulo;
+    background-color: #0097A7;
+  }
+  
+  .titulo {
+    font-size: 120px;
+    font-family: cursive;
+    color: #f3e0e0;
+  
+  }
+  
+  /* navigation */
+  
+  .headnav {
+    grid-area: headnav;
+    background-color: #0097A7;
+  }
+  
+  .menuhead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 5px;
+  
+  }
+  
+  .item_menuhead {
+    flex: 0 1 100px;
+    list-style-type: none;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  
+  .menuhead li a {
+    transition: all .9s;
+    font-size: 20px;
+    color: rgb(195, 180, 197);
+  }
+  
+  .menuhead li a:hover {
+    background-color: rgb(222, 160, 233);
+    color: white;
+    font-size: 25px;
+    border-color: #b65;
+  }
+  
+  
+.content {
+    grid-area: content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
+    grid-template-areas:
+      "mainnav "
+      "tercerasection"
+      
+  }
+  
+  /* image and text  */
+  
+
+  
+  /*una caja flex para el contenido del header ,recoge boton y texto*/
+  .caja1 {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .texto1 {
+    flex: 0 1 auto;
+    order: 0;
+    background-color: rgba(61, 61, 60, 0.609);
+    width: 50%;
+  }
+  
+  .titulotexto {
+    font-size: 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .content{
+      grid-area: content;
+     
+  }
+  
+
+  .info p {
+    text-align:center;
+    color: #999;
+    text-transform:none;
+    font-weight:600;
+    font-size:15px;
+    margin-top:2px
+  }
+  
+  .info i {
+    color:#F6AA93;
+  }
+  form h1 {
+    font-size: 18px;
+    background: #F6AA93 none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+    padding: 22px 25px;
+    border-radius: 5px 5px 0px 0px;
+    margin: auto;
+    text-shadow: none; 
+    text-align:left
+  }
+  
+  form {
+    border-radius: 5px;
+    max-width:700px;
+    width:100%;
+    margin: 5% auto;
+    background-color: #FFFFFF;
+    overflow: hidden;
+  }
+  
+  p span {
+    color: #F00;
+  }
+  
+  p {
+    margin: 0px;
+    font-weight: 500;
+    line-height: 2;
+    color:#333;
+  }
+  
+  h1 {
+    text-align:center; 
+    color: #666;
+    text-shadow: 1px 1px 0px #FFF;
+    margin:50px 0px 0px 0px
+  }
+  
+  input {
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    width: 75%;
+    height: 40px;
+    float: left;
+    padding: 0px 15px;
+  }
+  
+  a {
+    text-decoration:inherit
+  }
+  
+  textarea {
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #EEE;
+    margin: 0;
+    width: 75%;
+    height: 130px; 
+    float: left;
+    padding: 0px 15px;
+  }
+  
+  .form-group {
+    overflow: hidden;
+    clear: both;
+  }
+  
+  .icon-case {
+    width: 35px;
+    float: left;
+    border-radius: 5px 0px 0px 5px;
+    background:#eeeeee;
+    height:42px;
+    position: relative;
+    text-align: center;
+    line-height:40px;
+  }
+  
+  i {
+    color:#555;
+  }
+  
+  .contentform {
+    padding: 40px 30px;
+  }
+  
+  .bouton-contact{
+    background-color: #81BDA4;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    border:0;
+    padding: 17px 25px;
+    border-radius: 0px 0px 5px 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  
+  .leftcontact {
+    width:49.5%; 
+    float:left;
+    border-right: 1px dotted #CCC;
+    box-sizing: border-box;
+    padding: 0px 15px 0px 0px;
+  }
+  
+  .rightcontact {
+    width:49.5%;
+    float:right;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 15px;
+  }
+  
+  .validation {
+    display:none;
+    margin: 0 0 10px;
+    font-weight:400;
+    font-size:13px;
+    color: #DE5959;
+  }
+  
+  #sendmessage {
+    border:1px solid #fff;
+    display:none;
+    text-align:center;
+    margin:10px 0;
+    font-weight:600;
+    margin-bottom:30px;
+    background-color: #EBF6E0;
+    color: #5F9025;
+    border: 1px solid #B3DC82;
+    padding: 13px 40px 13px 18px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.03);
+  }
+  
+  #sendmessage.show,.show  {
+    display:block;
+  }
+
+   
+  /* #########################++FOOTER++########################################
+    ################################################################################### */
+  
+/* container */
+.footer-container {
+    color: #fff;
+     background: #0097A7;
+    grid-area: footer;
+     padding: 3em 0;
+     display: grid;
+     grid-template-columns: 2fr 2fr 2fr 3fr;
+     grid-template-rows: auto auto ;
+     grid-template-areas: 
+     "logo navigation secondary social"
+       "contact contact . novedades";
+   
+       
+   }
+   
+   /* logo */
+   .footer-logo {
+     grid-area: logo;
+   }
+   
+   .logo2 {
+     height: 250px;
+     width: 250px;
+   
+     /* nav */
+   }
+   
+   .footer-nav {
+     grid-area: navigation;
+     justify-self: center;
+     list-style: none;
+   }
+   
+   .footer-secondary-nav {
+     grid-area: secondary;
+     list-style: none;
+     justify-self: center;
+   }
+   
+   .social-networks {
+     grid-area: social;
+   }
+   
+   .contact-block {
+     grid-area: contact;
+   }
+   
+   .novedades {
+     grid-area: novedades;
+   }
+   
+   /* socila network */
+   .social-networks {
+   text-align: center;
+   }
+   
+   .facebookc {
+     width: 50px;
+     height: 50px;
+   }
+   .instagramc {
+     width: 50px;
+     height: 50px;
+   }
+   .twiterc {
+     width: 50px;
+     height: 50px;
+   }
+   /* contact */
+   .contact-block,
+   .novedades {
+     align-self: end;
+   }
+   
+   .contact-block a {
+     display: block;
+     border: 2px solid #fff;
+     padding: 0.5rem;
+     margin: 10px 0 0;
+     text-align: center;
+     width: 70%;
+   }
+   
+   .contact-block a:hover {
+     border: 2px solid #f99639;
+     color: #f99639;
+   }
+   
+   .social-networks {
+     border-bottom: 2px solid #f99639;
+   }
+   
+   
+   /* Terms */
+   /* .buttom-line {
+     background-color: rgb(233, 215, 195);
+     grid-area: buttom-line;
+     color: #000000;
+   } */
+   
+   
+   .novedades-text,
+   .text-input {
+     text-align: center;
+   }
+   
+   .text-input input {
+     border-radius: 25px;
+   }
+   
+   .text-input input:first-child {
+     height: 2rem;
+   }
+   
+   .text-input input:last-child {
+     height: 35px;
+     color: rgb(255, 255, 255);
+     border: none;
+     border-radius: 25px;
+     background-color: #f99639;
+     width: 100px;
+     font-weight: bold;
+   }
+   
+   .novedades-text icon,
+   .novedades-text p {
+     margin: 0 0 1.1rem;
+   }
+   
+   .novedades-text p {
+     line-height: 2rem;
+   }
+   
+   .footer a {
+     color: rgb(218, 195, 195);
+   }
+   
+   /* //arreglar el input */

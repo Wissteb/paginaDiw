@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <!--##### ##########Aqui empieza header############# -->
+        <header class="main-head">
+            <div class="cuerpoheader">
+                <div class="busqueda">
+                    <input type="search" id="search" placeholder="Search..." class="buttonbuscar" />
+
+                </div>
+                <div class="prehead">
+                    <div class="social1">
+
+                        <img src="img/facebook.png" class="facebookc1" alt="facebook">
+                        <img src="img/instagram.png" class="twiterc1" alt="twitter">
+                        <img src="img/twitter.png" class="instagramc1" alt="instagram">
+                    </div>
+                </div>
+
+                <nav class="headnav">
+                    <ul class="menuhead">
+                        <li class="item_menuhead"><a href="index.html">Home</a></li>
+                        <li class="item_menuhead"><a href="cs.css">Css</a></li>
+                        <li class="item_menuhead"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="headlogo">
+                    <div class="logo">
+                        <img src="img/milogo.png" class="logo1" alt="logo1">
+                    </div>
+                </div>
+                <div class="headtitulo">
+                    <h1 class="titulo"> EasyCss</h1>
+                </div>
+
+            </div>
+
+
+        </header>
+        <main class="content">
+        <h1>Elegant Contact Form.</h1>
+        <div class="info"><a href="https://www.grandvincent-marion.fr" target="_blank">
+                <p> Made with <i class="fa fa-heart"></i> by Marion Grandvincent </p>
+            </a></div>
+
+        <form>
+            <h1>Should you have any questions, please do not hesitate to contact me :</h1>
+
+            <div class="contentform">
+                <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+                <div class="leftcontact">
+                    <div class="form-group">
+                        <p>Surname<span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                        <input type="text" name="nom" id="nom" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Name <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-user"></i></span>
+                        <input type="text" name="prenom" id="prenom" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>E-mail <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                        <input type="email" name="email" id="email" data-rule="email"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Company <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-home"></i></span>
+                        <input type="text" name="society" id="society" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Company Address <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+                        <input type="text" name="adresse" id="adresse" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Adresse' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Postcode <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-map-marker"></i></span>
+                        <input type="text" name="postal" id="postal" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code postal' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="rightcontact">
+
+                    <div class="form-group">
+                        <p>City <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-building-o"></i></span>
+                        <input type="text" name="ville" id="ville" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Phone number <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-phone"></i></span>
+                        <input type="text" name="phone" id="phone" data-rule="maxlen:10"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres" />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Function <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-info"></i></span>
+                        <input type="text" name="fonction" id="fonction" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Subject <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-comment-o"></i></span>
+                        <input type="text" name="sujet" id="sujet" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné." />
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Message <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                        <textarea name="message" rows="14" data-rule="required"
+                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="bouton-contact">Send</button>
+
+        </form> </main>
+    
+
+
+
+    </div>
+
+        <footer class="footer">
+
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <img src="img/milogo.png" class="logo2" alt="Footer Logo">
+                    </div>
+                    <ul class="footer-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Lessons</a></li>
+                        <li><a href="#">Our Work</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                    <ul class="footer-secondary-nav">
+                        <li><a href="#">Latest News</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Css</a></li>
+                        <li><a href="#">Activity</a></li>
+                    </ul>
+                    <div class="contact-block">
+                        <h3>We're happy to hear from you!</h3>
+                        <a href="tel:698567895"> 698 56 78 95</a>
+                        <a href="EasyCss@company.es">EasyCss@company.es</a>
+                    </div>
+                    <div class="novedades">
+                        <div class="novedades-text">
+                            <div class="icon">
+                            </div>
+                            <p>
+                                Subscribe to our Newsletter
+                            </p>
+                        </div>
+                        <div class="text-input">
+                            <form action="post">
+                                <input type="email" name="Enter Your Email Address" size="20">
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="social-networks">
+                        <h3>Share our content!</h3>
+                        <br><br>
+                        <img src="img/facebook.png" class="facebookc" alt="">
+    
+                        <img src="img/instagram.png" class="twiterc" alt="">
+    
+                        <img src="img/twitter.png" class="instagramc" alt="">
+    
+                    </div><!-- .social-networks-->
+                    <!-- <div class="buttom-line">
+                        <p>Created by Wissy Teb</p>
+    
+                            <p>Terms of use </p>
+                            <p>Privacy</p>
+                            <p>Legal</p>
+                    </div> -->
+                </div>
+    
+    
+    
+            </footer>
+</div>
+</body>
+
+</html>
