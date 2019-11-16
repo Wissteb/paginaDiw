@@ -318,7 +318,9 @@ article#c6 {
   ******************************************/
 
 
-@media (min-width: 1300px) {}
+@media (min-width: 1300px) {#hamburguesa{
+  display: none;
+}}
 
 /*
   ################################################################################
@@ -327,7 +329,9 @@ article#c6 {
   ################################################################################### */
 
 @media (min-width: 995px) and (max-width: 1299px) {
-
+#hamburguesa{
+  display: none;
+}
 
   /*###############Container of the document#####################*/
   .contenedor {
@@ -362,7 +366,9 @@ article#c6 {
   ################################################################################
   ################################################################################### */
 @media (min-width: 576px) and (max-width: 995px) {
-
+  #hamburguesa{
+    display: none;
+  }
   .logo1 {
     height: 150px;
     width: 150px;
@@ -433,39 +439,16 @@ article#c6 {
 
   /*###############Container of the document#####################*/
   .contenedor {
-    grid-gap: 0px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto ;
     grid-template-areas:
-      "header "
-      "content"
-      "footer ";
+      "content";
   }
 
   /*
       <!--####### ########## Here is  header ############# -->
       ###################################################################################
       */
-  .main-head {
-    grid-area: header;
-
-  }
-
-  /* Container of header */
-  .cuerpoheader {
-    grid-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px;
-    grid-template-areas:
-      "busqueda"
-      " headnav";
-  }
-
-  .prehead {
-    grid-area: prehead;
-    display: none;
-  }
-
 
 
   /* logo of de web */
@@ -500,15 +483,7 @@ article#c6 {
 
   /* container */
 
-  .content {
-    margin: 10px;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto;
-    grid-template-areas:
-      "mainnav "
-      "tercerasection "
 
-  }
 
   /* ***********+++First section++++************* */
 
@@ -606,46 +581,49 @@ article#c6 {
     width: 90%;
 
   }
-}
 
-
-
-
-.hamburgMenu,
-.submenu1 {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.hamburgMenu a {
+#hamburgMenu{
   display: block;
-  background-color: #5a8cad;
-  text-decoration: none;
-  padding: 10px;
-  color: rgb(255, 255, 255);
+}
+  .hamburgMenu,
+  .submenu1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hamburgMenu a {
+    display: block;
+    background-color: #5a8cad;
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+  
+  }
+  
+  .hamburgMenu a:hover {
+    background-color: rgba(61, 56, 56, 0);
+  }
+  
+  .hamburgMenu li:hover .submenu1 {
+    display: block;
+    max-height: 200px;
+  }
+  
+  .submenu1 a {
+    background-color: rgba(251, 207, 207, 0.192);
+  }
+  
+  .submenu1 a:hover {
+    background-color: rgb(148, 230, 219);
+  }
+  
+  .submenu1 {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-out;
+  }
 
 }
 
-.hamburgMenu a:hover {
-  background-color: rgba(61, 56, 56, 0);
-}
 
-.hamburgMenu li:hover .submenu1 {
-  display: block;
-  max-height: 200px;
-}
-
-.submenu1 a {
-  background-color: rgba(251, 207, 207, 0.192);
-}
-
-.submenu1 a:hover {
-  background-color: rgb(148, 230, 219);
-}
-
-.submenu1 {
-  overflow: hidden;
-  max-height: 0;
-  transition: all 0.5s ease-out;
-}
