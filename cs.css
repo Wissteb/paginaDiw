@@ -11,17 +11,23 @@
   ############################################################################*/
 /*###############Container of the document#####################*/
 
+#hamburguesa{
+  flex: 1 200px;
+  order: 0;
 
+}
 .main-head {
   background-color: #0097A7;
   display: flex;
   flex-direction: row;
+  min-width: 450px;
 }
 
 
 .logo {
   flex: 1 200px;
   order: 0;
+  background-color: #0097A7;
 }
 
 .titulo {
@@ -30,6 +36,7 @@
   font-size: 120px;
   font-family: cursive;
   color: #f3e0e0;
+  
 
 }
 
@@ -172,6 +179,7 @@ article#c6 {
 
 /* container */
 .footer-container {
+  min-width: 450px;
   color: #fff;
   background: #0097A7;
   padding: 3em 0;
@@ -439,10 +447,7 @@ article#c6 {
 
   /*###############Container of the document#####################*/
   .contenedor {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto ;
-    grid-template-areas:
-      "content";
+ display: block;
   }
 
   /*
@@ -454,10 +459,11 @@ article#c6 {
   /* logo of de web */
   .logo1 {
     height: 100px;
-    margin-top: 25px;
-    display: none;
+    margin-left: 130px;
+    width: 100px;
   }
-
+.logo{
+order: 2;}
 
   /* title */
   .titulo {
@@ -583,6 +589,8 @@ article#c6 {
   }
 
 #hamburgMenu{
+
+  flex: 1 200px;
   display: block;
 }
   .hamburgMenu,
@@ -624,6 +632,10 @@ article#c6 {
     transition: all 0.5s ease-out;
   }
 
+
+  .headnav{
+   display: none;
+  }
 }
 
 
