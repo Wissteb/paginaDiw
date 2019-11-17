@@ -5,12 +5,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 19px;
 }
-
-/* For Desktop */
-/*############################################################################
-  ############################################################################*/
-/*###############Container of the document#####################*/
-
 #hamburguesa{
   flex: 1 200px;
   order: 0;
@@ -178,21 +172,29 @@ article#c6 {
 
 
 /* container */
-.footer-container {
+.footer{
   min-width: 450px;
   color: #fff;
   background: #0097A7;
   padding: 3em 0;
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 3fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "logo navigation secondary social"
-    "contact contact . novedades";
-
-
+  display: flex;
+  flex-direction: row;
+}
+ 
+.logocontact{
+  flex: 1 300px;
 }
 
+.news{
+  flex: 1 300px;
+}
+
+.navegationfoot{
+  flex: 1 100px;
+}
+.navegationfootsecondary{
+  flex: 1 100px;
+}
 /* logo */
 .footer-logo {
   grid-area: logo;
