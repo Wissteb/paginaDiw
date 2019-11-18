@@ -5,11 +5,70 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 19px;
 }
-#hamburguesa{
-  flex: 1 200px;
-  order: 0;
+
+/*HEADER***************************************************/
+
+/*Search*/
+
+.busqueda {
+  display: flex;
+  background-color: rgb(233, 215, 195);
+  flex-direction: row;
+}
+
+.busca {
+  flex: 1 100px;
 
 }
+
+.social1 {
+  flex: 1 80%;
+}
+
+.lupa {
+  width: 30px;
+  height: 30px;
+}
+
+
+.buttonbuscar {
+  background: #0b5b5d;
+  padding: 20px;
+  border-radius: 6px;
+  transition: 0.7s;
+  height: 30px;
+  background-image: url(img/lupa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: right;
+  border-radius: 15px;
+
+}
+
+.buttonbuscar:hover {
+  letter-spacing: 3px;
+  background: rgb(175, 102, 102);
+  transition: all 0.6s ease 0s;
+}
+
+/* social network */
+.facebookc1 {
+  width: 35px;
+  height: 35px;
+}
+
+.instagramc1 {
+  width: 35px;
+  height: 35px;
+}
+
+.twiterc1 {
+  width: 35px;
+  height: 35px;
+}
+
+/*Navigacion Header*/
 .main-head {
   background-color: #0097A7;
   display: flex;
@@ -17,28 +76,27 @@
   min-width: 450px;
 }
 
-
-.logo {
+.main-head .logo {
   flex: 1 200px;
   order: 0;
   background-color: #0097A7;
 }
 
-.titulo {
+.main-head .titulo {
   flex: 1 200px;
   order: 1;
   font-size: 120px;
   font-family: cursive;
   color: #f3e0e0;
-  
+
 
 }
 
-
 .headnav {
+  flex: 1 200px;
   order: 3;
   background-color: #0097A7;
-  flex: 1 200px;
+
 }
 
 .menuhead {
@@ -58,7 +116,6 @@
   font-size: 20px;
 }
 
-
 .menuhead li a {
   transition: all .9s;
   font-size: 20px;
@@ -72,30 +129,32 @@
   border-color: #b65;
 }
 
-.contenedor {
-  background-color: white;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 200px;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "content side";
+#hamburguesa {
+  flex: 1 200px;
+  order: 0;
 
+}
+
+/* MAIN  ************************************************/
+.contenedor {
+  margin-top: 50px;
+  background-color: white;
+  display: flex;
 }
 
 .content {
-  grid-area: content;
+  flex: 1 90%;
 }
 
 .side {
-  background-color: #222527;
-  grid-area: side;
+  flex: 1 10%;
+
 }
 
-
+/*Nav Side*/
 .navigation {
   width: auto;
-  background-color: #222527;
+  background-color: #83576bb4;
   height: 500px;
   position: sticky;
   z-index: 9999;
@@ -111,15 +170,15 @@
 
 .mainmenu a {
   display: block;
-  background-color: #222527;
+
   text-decoration: none;
   padding: 10px;
-  color: rgb(155, 155, 155);
+  color: rgb(255, 255, 255);
 
 }
 
 .mainmenu a:hover {
-  background-color: rgb(61, 56, 56);
+  background-color: rgb(194, 150, 188);
 }
 
 .mainmenu li:hover .submenu {
@@ -142,7 +201,7 @@
 }
 
 
-
+/*Content CSS  */
 .LessonsCaja {
   display: flex;
   flex-direction: row;
@@ -163,77 +222,80 @@ article#c6 {
   background-color: blue;
   margin: 10px;
 
-
 }
 
-
-/* #########################++FOOTER++########################################
-    ################################################################################### */
-
+/* FOOTER********************************************** */
 
 /* container */
-.footer{
+.footer {
   min-width: 450px;
   color: #fff;
   background: #0097A7;
-  padding: 3em 0;
+  padding: 2em 0;
   display: flex;
   flex-direction: row;
 }
- 
-.logocontact{
+
+/*FIRST BLOCK*/
+.logocontact {
   flex: 1 300px;
 }
 
-.news{
-  flex: 1 300px;
+/*SECOND BLOCK*/
+.news {
+  flex: 1 400px;
 }
 
-.navegationfoot{
+/*THIRD BLOCK*/
+.navegationfoot {
+  flex: 1 100px;
+
+}
+
+/*FOURTH BLOCK*/
+.navegationfootsecondary {
   flex: 1 100px;
 }
-.navegationfootsecondary{
-  flex: 1 100px;
+
+.contact-block a {
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 10px 0 0;
+  text-align: center;
+  width: 80%;
+  color: #f939a9;
+  background-color: rgba(0, 0, 0, 0.424);
 }
-/* logo */
-.footer-logo {
-  grid-area: logo;
+
+.contact-block a:hover {
+  border: 2px solid #f99639;
+  color: #f99639;
 }
+
+.social-networks {
+  margin-top: 60px;
+  border-bottom: 2px solid #f99639;
+  text-align: center;
+}
+
 
 .logo2 {
   height: 250px;
   width: 250px;
-
-  /* nav */
 }
 
-.footer-nav {
-  grid-area: navigation;
-  justify-self: center;
-  list-style: none;
-}
-
+.footer-nav,
 .footer-secondary-nav {
-  grid-area: secondary;
   list-style: none;
-  justify-self: center;
+  color: #f939a9;
 }
 
-.social-networks {
-  grid-area: social;
-}
-
-.contact-block {
-  grid-area: contact;
-}
-
-.novedades {
-  grid-area: novedades;
-}
-
-/* socila network */
-.social-networks {
-  text-align: center;
+.footer-nav a,
+.footer-secondary-nav a {
+  list-style: none;
+  color: #c7a5b9f1;
 }
 
 .facebookc {
@@ -251,53 +313,28 @@ article#c6 {
   height: 50px;
 }
 
-/* contact */
-.contact-block,
-.novedades {
-  align-self: end;
+.news .novedades {
+  text-align: right;
+  margin-right: 50px;
+  margin-top: 50px;
 }
 
-.contact-block a {
-  display: block;
-  border: 2px solid #fff;
-  padding: 0.5rem;
-  margin: 10px 0 0;
+.news .novedades p {
   text-align: center;
-  width: 70%;
+  margin-bottom: 50px;
 }
 
-.contact-block a:hover {
-  border: 2px solid #f99639;
-  color: #f99639;
-}
-
-.social-networks {
-  border-bottom: 2px solid #f99639;
-}
-
-
-/* Terms */
-/* .buttom-line {
-    background-color: rgb(233, 215, 195);
-    grid-area: buttom-line;
-    color: #000000;
-  } */
-
-
-.novedades-text,
-.text-input {
+.news .novedades input {
   text-align: center;
-}
-
-.text-input input {
   border-radius: 25px;
+
 }
 
-.text-input input:first-child {
+.news .novedades input:first-child {
   height: 2rem;
 }
 
-.text-input input:last-child {
+.news .novedades input:last-child {
   height: 35px;
   color: rgb(255, 255, 255);
   border: none;
@@ -305,61 +342,33 @@ article#c6 {
   background-color: #f99639;
   width: 100px;
   font-weight: bold;
+
 }
-
-.novedades-text icon,
-.novedades-text p {
-  margin: 0 0 1.1rem;
-}
-
-.novedades-text p {
-  line-height: 2rem;
-}
-
-.footer a {
-  color: rgb(218, 195, 195);
-}
-
-
-/*********************************************************
-  ************************************************************
-  ************************************************
-  css
-  ******************************************/
-
-
-@media (min-width: 1300px) {#hamburguesa{
-  display: none;
-}}
 
 /*
-  ################################################################################
-  ###################################**Large**###############################################
-  ################################################################################
-  ################################################################################### */
-
-@media (min-width: 995px) and (max-width: 1299px) {
-#hamburguesa{
-  display: none;
+  ###################################**extra Large**###############################################
+*/
+@media (min-width: 1300px) {
+  #hamburguesa {
+    display: none;
+  }
 }
 
-  /*###############Container of the document#####################*/
-  .contenedor {
-    grid-template-columns: 1fr 100px;
+/*
+  ###################################**Large**###############################################
+*/
+
+@media (min-width: 995px) and (max-width: 1299px) {
+  #hamburguesa {
+    display: none;
   }
 
   .content {
     margin: 5px;
 
   }
-
+ 
   /* container */
-  .footer-container {
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "logo social"
-      "contact  novedades";
-  }
 
   .footer-nav {
     display: none;
@@ -371,22 +380,21 @@ article#c6 {
 }
 
 /* 
-  ################################################################################
   ###################################**Medium**###############################################
-  ################################################################################
-  ################################################################################### */
+ */
 @media (min-width: 576px) and (max-width: 995px) {
-  #hamburguesa{
+  #hamburguesa {
     display: none;
   }
+
   .logo1 {
-    height: 150px;
-    width: 150px;
-    margin-top: 20px;
+    margin-top: 0px;
+    height: 100px;
+    width: 100px;
+
   }
 
   .titulo {
-    font-size: 30px;
     display: none;
   }
 
@@ -402,26 +410,8 @@ article#c6 {
     font-size: 16px;
   }
 
-  .bluebtn {
-    width: 50%;
-  }
-
-  .content {
-    margin: 30px;
-  }
-
-
-  /* #########################++FOOTER++########################################
-      ################################################################################### */
   /*Footer*/
   /* nav */
-  .footer-container {
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "logo social"
-      "contact  novedades";
-  }
-
 
   .footer-nav {
     display: none;
@@ -438,34 +428,80 @@ article#c6 {
 }
 
 /* 
-  ################################################################################
-  ###################################**Small**###############################################
-  ################################################################################
-  ################################################################################### */
+  
+  ###################################**Small**###############################################*/
 @media (min-width: 0px) and (max-width: 576px) {
   * {
     font-size: 15px;
   }
 
-  /*###############Container of the document#####################*/
-  .contenedor {
- display: block;
+  /*
+      <!--header -->*/
+  .busqueda {
+    display: none;
+
   }
 
-  /*
-      <!--####### ########## Here is  header ############# -->
-      ###################################################################################
-      */
+  .headnav {
+    display: none;
+  }
 
+  #hamburgMenu {
+
+    flex: 1 200px;
+    display: block;
+
+  }
+
+  .hamburgMenu,
+  .submenu1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hamburgMenu a {
+    display: block;
+    background-color: #5a8cad;
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+
+  }
+
+  .hamburgMenu a:hover {
+    background-color: rgba(61, 56, 56, 0);
+  }
+
+  .hamburgMenu li:hover .submenu1 {
+    display: block;
+    max-height: 200px;
+  }
+
+  .submenu1 a {
+    background-color: rgba(251, 207, 207, 0.192);
+  }
+
+  .submenu1 a:hover {
+    background-color: rgb(148, 230, 219);
+  }
+
+  .submenu1 {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-out;
+  }
 
   /* logo of de web */
   .logo1 {
     height: 100px;
-    margin-left: 130px;
+    margin-left: 150px;
     width: 100px;
   }
-.logo{
-order: 2;}
+
+  .logo {
+    order: 2;
+  }
 
   /* title */
   .titulo {
@@ -473,93 +509,40 @@ order: 2;}
 
   }
 
-  /* navigation */
-  .menuhead li a {
-    font-size: 18px;
+  /* Main container */
+  .contenedor {
+    display: block;
   }
 
-  .menuhead li a:hover {
-    color: white;
-    font-size: 20px;
-    border-color: #b65;
-  }
-
-  /*
-      <!--##### ##########Aqui empieza Main ############# -->
-      ###################################################################################
-      */
-
-  /* container */
-
-
-
-  /* ***********+++First section++++************* */
-
-
-  /* ***********+++Nav++++************* */
-
-  .item_menuvertical {
-    flex: 1 0 30px;
-    background-color: rgb(24, 240, 168);
-    width: 30%;
-    margin: auto;
-  }
-
-  .item_menuvertical a {
-    text-decoration: none;
-    transition: all .9s;
-    font-size: 12px;
-    margin-left: 4%;
-
-  }
-
-  .item_menuvertical :hover {
-    font-size: 14px;
-  }
-
-  /* ***********+++Third Section++++************* */
-
-
-
-  /* #########################Sidebar########################################
-      ################################################################################### */
+  /* ****Nav*/
   .side {
     display: none;
   }
 
-  /* #########################++FOOTER++########################################
-      ################################################################################### */
-
-
-  /* container */
-  .footer-container {
-    grid-gap: 30px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "logo "
-      "social"
-      "contact"
-      "novedades";
+  /*++FOOTER++ */
+  .footer {
+    flex-direction: column;
   }
 
-  /* logo */
-  .footer-logo {
-    grid-area: logo;
+  /*FIRST BLOCK*/
+  .logocontact {
     display: none;
   }
 
-  .logo2 {
+  /*SECOND BLOCK*/
+  .news {
+    flex: 1 200px;
+    align-self: center;
+  }
+
+  /*THIRD BLOCK*/
+  .navegationfoot {
     display: none;
 
   }
 
-  /* nav */
-  .footer-nav {
-    display: none;
-  }
-
-  .footer-secondary-nav {
+  /*FOURTH BLOCK*/
+  .navegationfootsecondary {
     display: none;
   }
 
@@ -580,64 +563,4 @@ order: 2;}
     height: 40px;
   }
 
-  /* contact */
-  .contact-block {
-    margin-left: 10px;
-  }
-
-  .contact-block a {
-    width: 90%;
-
-  }
-
-#hamburgMenu{
-
-  flex: 1 200px;
-  display: block;
 }
-  .hamburgMenu,
-  .submenu1 {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .hamburgMenu a {
-    display: block;
-    background-color: #5a8cad;
-    text-decoration: none;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-  
-  }
-  
-  .hamburgMenu a:hover {
-    background-color: rgba(61, 56, 56, 0);
-  }
-  
-  .hamburgMenu li:hover .submenu1 {
-    display: block;
-    max-height: 200px;
-  }
-  
-  .submenu1 a {
-    background-color: rgba(251, 207, 207, 0.192);
-  }
-  
-  .submenu1 a:hover {
-    background-color: rgb(148, 230, 219);
-  }
-  
-  .submenu1 {
-    overflow: hidden;
-    max-height: 0;
-    transition: all 0.5s ease-out;
-  }
-
-
-  .headnav{
-   display: none;
-  }
-}
-
-

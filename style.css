@@ -5,54 +5,30 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 19px;
 }
-/* For Desktop */
-/*############################################################################
-############################################################################*/
-/*###############Container of the document#####################*/
-.contenedor {
-  background-color: white;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 200px;
-  /*para cambiar el ancho*/
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "header header"
-    " content side "
-    "footer footer";
-  /* background-image: linear-gradient(to left bottom, #e5aaa1, #ebb18e, #e3bd7d, #cbcd76, #a3dd83, #6fe3ab, #31e5d5,
-  #00e3fa, #00d2ff, #5dbaff, #af9aff, #e772d8); */
-}
-/*
-  <!--####### ########## Here is  header ############# -->
-  ###################################################################################
-  */
-.main-head {
-  grid-area: header;
+
+/*HEADER***************************************************/
+
+/*Search*/
+
+.busqueda {
+  display: flex;
+  background-color: rgb(233, 215, 195);
+  flex-direction: row;
 }
 
-/* Container of header */
-.cuerpoheader {
-  display: grid;
-  grid-gap: 0px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px auto;
-  grid-template-areas:
-    "prehead prehead busqueda"
-    "headlogo headtitulo headnav"
+.busca {
+  flex: 1 100px;
+
 }
-/* Button and input search for the web */
-/*container*/
-.busqueda {
-  grid-area: busqueda;
-  background-color: rgb(233, 215, 195);
+
+.social1 {
+  flex: 1 80%;
 }
 
 .lupa {
   width: 30px;
   height: 30px;
 }
-
 
 .buttonbuscar {
   background: #0b5b5d;
@@ -75,15 +51,7 @@
   transition: all 0.6s ease 0s;
 }
 
-
-
 /* social network */
-
-.prehead {
-  grid-area: prehead;
-  background-color: rgb(233, 215, 195);
-}
-
 .facebookc1 {
   width: 35px;
   height: 35px;
@@ -95,45 +63,38 @@
 }
 
 .twiterc1 {
-
   width: 35px;
   height: 35px;
 }
 
-/* logo of de web */
+/*Navigacion Header*/
+.main-head {
+  background-color: #0097A7;
+  display: flex;
+  flex-direction: row;
+  min-width: 450px;
+}
 
-.headlogo {
-  grid-area: headlogo;
+.main-head .logo {
+  flex: 1 200px;
+  order: 0;
   background-color: #0097A7;
 }
 
-.logo1 {
-  position: absolute;
-  top: 0px;
-  bottom: 20px;
-  left: 0px;
-  height: 240px;
-
-}
-
-/* title */
-.headtitulo {
-  grid-area: headtitulo;
-  background-color: #0097A7;
-}
-
-.titulo {
+.main-head .titulo {
+  flex: 1 200px;
+  order: 1;
   font-size: 120px;
   font-family: cursive;
   color: #f3e0e0;
 
 }
 
-/* navigation */
-
 .headnav {
-  grid-area: headnav;
+  flex: 1 200px;
+  order: 3;
   background-color: #0097A7;
+
 }
 
 .menuhead {
@@ -153,7 +114,6 @@
   font-size: 20px;
 }
 
-
 .menuhead li a {
   transition: all .9s;
   font-size: 20px;
@@ -167,7 +127,11 @@
   border-color: #b65;
 }
 
+#hamburguesa {
+  flex: 1 200px;
+  order: 0;
 
+}
 
 /*
   <!--##### ##########Aqui empieza Main ############# -->
@@ -175,25 +139,44 @@
   */
 
 /* container */
-
 .content {
-  grid-area: content;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 600px 1fr 90px 1fr 900px;
-  grid-template-areas:
-    "headimage "
-    "primerasection"
-    "mainnav "
-    "tercerasection"
-    "cuartasection"
+  display: flex;
+  flex-direction: row;
+
 }
+
+.cuerpocontenido {
+  flex: 1 80%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+
+}
+
+.primerasection {
+  flex: 1 600px;
+
+}
+
+.mainnav {
+  flex: 1 90px;
+
+}
+
+.tercerasection {
+  flex: 1 600px;
+}
+
+.cuartasection {
+  flex: 1 600px;
+}
+
 
 /* image and text  */
 
 .headimage {
-  grid-area: headimage;
+  flex: 1 500px;
+  width: 100%;
   background-image: url(img/pc.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -203,17 +186,7 @@
 
 }
 
-/*una caja flex para el contenido del header ,recoge boton y texto*/
-.caja1 {
-  margin-top: 160px;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.texto1 {
-  flex: 0 1 auto;
-  order: 0;
+.headimage p {
   background-color: rgba(61, 61, 60, 0.609);
   width: 50%;
 }
@@ -223,17 +196,14 @@
 }
 
 .bluebtn {
-  margin-top: 50px;
+  margin-top: 70px;
   border: none;
   background: #d064da;
   color: #060707;
-  font-weight: 100;
   padding: 20px;
   text-transform: uppercase;
   border-radius: 6px;
-  flex: 0 1 50px;
   width: 30%;
-  order: 0;
   transition: all 0.3s ease 0s;
   background-image: url(img/estudiar.png);
   background-position: center;
@@ -253,40 +223,31 @@
 /* ***********+++First section++++************* */
 .primerasection {
   background-color: rgba(230, 222, 222, 0.808);
-  grid-area: primerasection;
+
+}
+
+.primerasection h2 {
+  font-size: 45px;
 
 }
 
 .contenedorprimera {
   display: flex;
   flex-direction: row;
+
 }
 
-.textopritext {
-  font-size: 45px;
+.contenedorprimera p {
+  text-align: center;
+
 }
 
 .icono1 {
-  flex: 1 1 auto;
+  flex: 1 1 100px;
+  align-self: center;
 
 }
 
-.icono2 {
-  flex: 1 1 auto;
-}
-
-.icono3 {
-  flex: 1 1 auto;
-}
-
-.aprende {
-  width: 200px;
-  height: 200px;
-  margin-left: 30%;
-
-}
-
-.practica,
 .lee {
   width: 200px;
   height: 200px;
@@ -301,10 +262,10 @@
   border-radius: 6px;
   width: 30%;
   transition: all 0.3s ease 0s;
-  height: 50px;
+  height: 60px;
   border-radius: 15px;
   margin-top: 50px;
-
+  margin-left: 35%;
 }
 
 .button3:hover {
@@ -317,8 +278,6 @@
 /* ***********+++Nav++++************* */
 
 .mainnav {
-  grid-area: mainnav;
-  display: block;
   position: sticky;
   z-index: 9999;
   top: 0px;
@@ -347,13 +306,10 @@
   border-radius: 15px;
 }
 
-
 .menuvertical li a {
   text-decoration: none;
-  width: 140px;
-  height: 30px;
   transition: all .9s;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .menuvertical li a:hover {
@@ -362,44 +318,28 @@
 }
 
 /* ***********+++Third Section++++************* */
-
-
-.tercerasection {
-  grid-area: tercerasection;
-
-}
-
 .contenedorter {
-  display: grid;
-  grid-gap: 0px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 500px;
-  grid-template-areas:
-    "cajater1 cajater2 cajater3"
+  display: flex;
+  flex-direction: row;
 }
 
 /* Text */
-.why {
+.tercerasection h2 {
   font-size: 30px;
   color: rgb(255, 71, 230);
 }
 
-/**** First card ******/
+/**** First swcond third  card ******/
 .cajater1 {
-  grid-area: cajater1;
-  display: flex;
-  flex-direction: column;
+  flex: 1;
   opacity: 0.6;
   transition: 0.5s;
   color: rgba(102, 51, 153, 0);
   border: black solid 2px;
   background-color: rgb(0, 128, 100);
-
 }
 
-.imgter1 {
-  flex: 0 1 100px;
-  order: 0;
+.contenedorter .cajater1 img {
   width: 250px;
   margin-left: 60px;
 
@@ -413,78 +353,6 @@
 
 }
 
-.textoinclude1 {
-  flex: 0 1 100px;
-  order: 1;
-
-}
-
-/***** Second Card *******/
-.cajater2 {
-  grid-area: cajater2;
-  background-color: rgb(24, 202, 113);
-  display: flex;
-  flex-direction: column;
-  opacity: 0.6;
-  transition: 0.5s;
-  color: rgba(102, 51, 153, 0);
-  border: black solid 2px;
-
-}
-
-.cajater2:hover {
-  opacity: 1;
-  color: #e9eaec;
-  background: #333;
-  transform: translateY(60px);
-
-}
-
-.imgter2 {
-  flex: 0 1 100px;
-  order: 0;
-  width: 250px;
-  margin-left: 60px;
-}
-
-.textoinclude2 {
-  flex: 0 1 100px;
-  order: 1;
-}
-
-/********* Third Card *********/
-
-.cajater3 {
-  grid-area: cajater3;
-  background-color: rgb(250, 102, 127);
-  display: flex;
-  flex-direction: column;
-  opacity: 0.6;
-  transition: 0.5s;
-  color: rgba(102, 51, 153, 0);
-  border: black solid 2px;
-}
-
-.cajater3:hover {
-  opacity: 1;
-  color: #e9eaec;
-  background: #333;
-  transform: translateY(60px);
-
-}
-
-.imgter3 {
-  flex: 0 1 100px;
-  order: 0;
-  width: 250px;
-  margin-left: 60px;
-}
-
-.textoinclude3 {
-  flex: 0 1 100px;
-  order: 1;
-}
-
 /* ***********+++fourth Section++++************* */
 .cuartasection {
   margin-top: 50px;
@@ -492,7 +360,7 @@
       #1b3e4e, #22334a, #2d2840, #341c31);
 }
 
-.sobre {
+.cuartasection h2 {
   font-size: 90px;
   color: rgb(7, 4, 7);
   margin-bottom: 30px;
@@ -500,15 +368,10 @@
 }
 
 .cajacuar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   opacity: 0.8;
   transition: 0.5s;
   font-size: 20px;
   color: #d1c7c7;
-
 
 }
 
@@ -520,29 +383,26 @@
 
 }
 
-.imagcuar4 {
-  flex: 1 1 100px;
+.cajacuar img {
   width: 600px;
-
+  height: 100;
+  float: left;
+  clear: both;
 }
 
-.textoabout {
+.cajacuar p {
   text-align: center;
 }
 
 /* #########################Sidebar########################################
   ################################################################################### */
 .side {
-  grid-area: side;
-  display: grid;
-  grid-gap: 100px;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 300px);
-  grid-template-areas:
-    "info1 "
-    "info2 "
-    "info3 "
-    "info3 ";
+  background-color: rgba(230, 222, 222, 0.808);
+  flex: 0 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
 }
 
 .info1 {
@@ -551,86 +411,81 @@
   border: #5ffbbf solid 10px;
 
 
-}
 
-.info2 {
-  border: #5ffbbf solid 10px;
-  border-radius: 10px;
-  background-color: #5ffbf13d;
 }
-
-.info3 {
-  border: #e45ffb solid 10px;
-  border-radius: 10px;
-  background-color: #5ffbf146;
-}
-
-.info4 {
-  border: #e45ffb solid 10px;
-  border-radius: 10px;
-  background-color: #5ffbf12f;
-}
-
 
 /* #########################++FOOTER++########################################
   ################################################################################### */
 
-
-/* container */
-.footer-container {
+.footer {
+  min-width: 450px;
   color: #fff;
   background: #0097A7;
-  grid-area: footer;
-  padding: 3em 0;
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 3fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "logo navigation secondary social"
-    "contact contact . novedades";
+  padding: 2em 0;
+  display: flex;
+  flex-direction: row;
+}
 
+/*FIRST BLOCK*/
+.logocontact {
+  flex: 1 300px;
+}
+
+/*SECOND BLOCK*/
+.news {
+  flex: 1 400px;
+}
+
+/*THIRD BLOCK*/
+.navegationfoot {
+  flex: 1 100px;
 
 }
 
-/* logo */
-.footer-logo {
-  grid-area: logo;
+/*FOURTH BLOCK*/
+.navegationfootsecondary {
+  flex: 1 100px;
 }
+
+.contact-block a {
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 10px 0 0;
+  text-align: center;
+  width: 80%;
+  color: #f939a9;
+  background-color: rgba(0, 0, 0, 0.424);
+}
+
+.contact-block a:hover {
+  border: 2px solid #f99639;
+  color: #f99639;
+}
+
+.social-networks {
+  margin-top: 60px;
+  border-bottom: 2px solid #f99639;
+  text-align: center;
+}
+
 
 .logo2 {
   height: 250px;
   width: 250px;
-
-  /* nav */
 }
 
-.footer-nav {
-  grid-area: navigation;
-  justify-self: center;
-  list-style: none;
-}
-
+.footer-nav,
 .footer-secondary-nav {
-  grid-area: secondary;
   list-style: none;
-  justify-self: center;
+  color: #f939a9;
 }
 
-.social-networks {
-  grid-area: social;
-}
-
-.contact-block {
-  grid-area: contact;
-}
-
-.novedades {
-  grid-area: novedades;
-}
-
-/* socila network */
-.social-networks {
-  text-align: center;
+.footer-nav a,
+.footer-secondary-nav a {
+  list-style: none;
+  color: #c7a5b9f1;
 }
 
 .facebookc {
@@ -648,53 +503,28 @@
   height: 50px;
 }
 
-/* contact */
-.contact-block,
-.novedades {
-  align-self: end;
+.news .novedades {
+  text-align: right;
+  margin-right: 50px;
+  margin-top: 50px;
 }
 
-.contact-block a {
-  display: block;
-  border: 2px solid #fff;
-  padding: 0.5rem;
-  margin: 10px 0 0;
+.news .novedades p {
   text-align: center;
-  width: 70%;
+  margin-bottom: 50px;
 }
 
-.contact-block a:hover {
-  border: 2px solid #f99639;
-  color: #f99639;
-}
-
-.social-networks {
-  border-bottom: 2px solid #f99639;
-}
-
-
-/* Terms */
-/* .buttom-line {
-  background-color: rgb(233, 215, 195);
-  grid-area: buttom-line;
-  color: #000000;
-} */
-
-
-.novedades-text,
-.text-input {
+.news .novedades input {
   text-align: center;
-}
-
-.text-input input {
   border-radius: 25px;
+
 }
 
-.text-input input:first-child {
+.news .novedades input:first-child {
   height: 2rem;
 }
 
-.text-input input:last-child {
+.news .novedades input:last-child {
   height: 35px;
   color: rgb(255, 255, 255);
   border: none;
@@ -702,91 +532,45 @@
   background-color: #f99639;
   width: 100px;
   font-weight: bold;
+
 }
 
-.novedades-text icon,
-.novedades-text p {
-  margin: 0 0 1.1rem;
-}
-
-.novedades-text p {
-  line-height: 2rem;
-}
-
-.footer a {
-  color: rgb(218, 195, 195);
-}
-
-
-@media (min-width: 1300px) {}
-
-/*
-################################################################################
-###################################**Large**###############################################
-################################################################################
-################################################################################### */
-
-@media (min-width: 995px) and (max-width: 1299px) {
-
-  /*###############Container of the document#####################*/
-  .contenedor {
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "header "
-      " content"
-      " side"
-      "footer";
+@media (min-width: 1300px) {
+  #hamburguesa {
+    display: none;
   }
 
-  /*
-        <!--##### ##########Aqui empieza Main ############# -->
-        ###################################################################################
-        */
+}
 
+/*###################################**Large**###############################################*/
+
+@media (min-width: 995px) and (max-width: 1299px) {
+  #hamburguesa {
+    display: none;
+  }
+
+  /*     <!--Main  --> */
   /* container */
 
   .content {
-    grid-template-rows: 600px 1fr 70px 1fr 900px;
-    margin: 5px;
+    flex-direction: column;
   }
 
-  /* ***********+++First section++++************* */
-
-
+  /* First section+*/
   .button3 {
     width: 300px;
     height: 70px;
   }
 
-  /* #########################Sidebar########################################
-        ################################################################################### */
+  /* Sidebar*/
   .side {
-    grid-gap: 2px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 300px);
-    grid-template-areas:
-      "info1 info2 info3 info4 ";
-
+    flex-direction: row;
+    margin: 30px;
   }
 
-  /* #########################++FOOTER++########################################
-        ################################################################################### */
-
-
-  /* container */
-  .footer-container {
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "logo social"
-      "contact  novedades";
-  }
-
-  /* nav */
-
+  /* +FOOTER++############ */
 
   .footer-nav {
-
     display: none;
   }
 
@@ -795,71 +579,22 @@
   }
 }
 
-/* 
-################################################################################
-###################################**Medium**###############################################
-################################################################################
-################################################################################### */
+/*###################################**Medium**############################################### */
 @media (min-width: 576px) and (max-width: 995px) {
-
-  /*###############Container of the document#####################*/
-  .contenedor {
-    grid-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "header  "
-      " content "
-      "footer  ";
-  }
-
-  /*
-    <!--####### ########## Here is  header ############# -->
-    ###################################################################################
-    */
-  .main-head {
-    grid-area: header;
+  #hamburguesa {
+    display: none;
   }
 
   /* Container of header */
-  .cuerpoheader {
-    grid-gap: 0px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 100px;
-    grid-template-areas:
-      "prehead  busqueda"
-      "headlogo  headnav"
-  }
-
-  .caja1 {
-    margin-top: 20px;
-  }
-
-  .texto1 {
-    flex: 1 1 auto;
-    width: 70%;
-    font-size: 17px;
-  }
-
-  .titulotexto {
-    font-size: 40px;
-  }
-
-  /* logo of de web */
-  .headlogo {
-    grid-area: headlogo;
-    background-color: #0097A7;
-  }
 
   .logo1 {
-    height: 150px;
-    width: 150px;
-    margin-top: 20px;
+    margin-top: 0px;
+    height: 100px;
+    width: 100px;
+
   }
 
-  /* title */
   .titulo {
-    font-size: 30px;
     display: none;
   }
 
@@ -875,32 +610,30 @@
     font-size: 16px;
   }
 
-  .bluebtn {
-    width: 50%;
+  .caja1 {
+    margin-top: 20px;
   }
 
-  /*una caja flex para el contenido del header ,recoge boton y texto*/
+  .titulotexto {
+    font-size: 40px;
+  }
 
-  /*
-    <!--##### ##########Aqui empieza Main ############# -->
-    ###################################################################################
-    */
+  .bluebtn {
+    width: 30%;
+  }
+
+
+  /*  <!-Main -->
   /* container */
   .content {
-    margin: 30px;
-  }
-
-  .content {
-    grid-template-rows: 500px 700px auto auto;
-    grid-template-areas:
-      "headimage "
-      "primerasection "
-      "mainnav "
-      "tercerasection "
-      "cuartasection "
+    margin: 5px;
   }
 
   /* ***********+++First section++++************* */
+  .contenedorprimera {
+    flex-direction: column;
+  }
+
   .button3 {
     width: 250px;
     height: 70px;
@@ -911,26 +644,9 @@
     height: 150px;
   }
 
-  .aprende {
-    width: 150px;
-    height: 150px;
-  }
-
-  .practica {
-    width: 150px;
-    height: 150px;
-  }
-
   /* ***********+++Third Section++++************* */
-
   .contenedorter {
-    grid-template-columns: auto;
-    grid-gap: 5px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "cajater1 "
-      " cajater2 "
-      "cajater3 "
+    flex-direction: column;
   }
 
   /**** First card ******/
@@ -938,47 +654,22 @@
     transform: translateY(5px);
   }
 
-  .textoinclude1 {
-    flex: 0 1 100px;
-    order: 1;
-
-  }
-
-  /***** Second Card *******/
-  .cajater2:hover {
-    transform: translateY(5px);
-  }
-
-  /********* Third Card *********/
-  .cajater3:hover {
-    transform: translateY(5px);
-
-  }
-
   /* ***********+++fourth Section++++************* */
-  .imagcuar4 {
+  .cajacuar img {
     width: 400px;
   }
 
-  /* #########################Sidebar########################################
-    ################################################################################### */
+  /* #########################Sidebar########################################*/
+
   .side {
     grid-area: side;
     display: none;
   }
 
-  /* #########################++FOOTER++########################################
-    ################################################################################### */
+  /* #########################++FOOTER++########################################*/
+
   /*Footer*/
   /* nav */
-  .footer-container {
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "logo social"
-      "contact  novedades";
-  }
-
-
   .footer-nav {
     display: none;
   }
@@ -986,67 +677,87 @@
   .footer-secondary-nav {
     display: none;
   }
-  
+
   .contact-block a {
     width: 90%;
 
   }
 }
 
-/* 
-################################################################################
-###################################**Small**###############################################
-################################################################################
-################################################################################### */
+/* ###################################**Small**###############################################*/
 @media (min-width: 0px) and (max-width: 576px) {
   * {
     font-size: 15px;
   }
 
-  /*###############Container of the document#####################*/
-  .contenedor {
-    grid-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "header "
-      "content"
-      "footer ";
-  }
-
   /*
-    <!--####### ########## Here is  header ############# -->
-    ###################################################################################
-    */
-  .main-head {
-    grid-area: header;
+    <!-- header -->*/
+
+  .busqueda {
+    display: none;
 
   }
 
-  /* Container of header */
-  .cuerpoheader {
-    grid-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px;
-    grid-template-areas:
-      "busqueda"
-      " headnav";
-  }
-
-  .prehead {
-    grid-area: prehead;
+  .headnav {
     display: none;
   }
 
+  #hamburgMenu {
 
+    flex: 1 200px;
+    display: block;
+
+  }
+
+  .hamburgMenu,
+  .submenu1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hamburgMenu a {
+    display: block;
+    background-color: #5a8cad;
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+
+  }
+
+  .hamburgMenu a:hover {
+    background-color: rgba(61, 56, 56, 0);
+  }
+
+  .hamburgMenu li:hover .submenu1 {
+    display: block;
+    max-height: 200px;
+  }
+
+  .submenu1 a {
+    background-color: rgba(251, 207, 207, 0.192);
+  }
+
+  .submenu1 a:hover {
+    background-color: rgb(148, 230, 219);
+  }
+
+  .submenu1 {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-out;
+  }
 
   /* logo of de web */
   .logo1 {
     height: 100px;
-    margin-top: 25px;
-    display: none;
+    margin-left: 150px;
+    width: 100px;
   }
 
+  .logo {
+    order: 2;
+  }
 
   /* title */
   .titulo {
@@ -1054,58 +765,29 @@
 
   }
 
-  /* navigation */
-  .menuhead li a {
-    font-size: 18px;
-  }
-
-  .menuhead li a:hover {
-    color: white;
-    font-size: 20px;
-    border-color: #b65;
-  }
-
-  /*una caja flex para el contenido del header ,recoge boton y texto*/
-  /* .caja1 {
-    margin-top: 20px;
-  } */
-
+  /*
+    <!--Main -->
+  /* container */
   .texto1 {
     width: 90%;
   }
 
-  .titulotexto {
-    font-size: 50px;
-  }
-
   .bluebtn {
-    width: 40%;
+    width: 20%;
   }
-
-  /*
-    <!--##### ##########Aqui empieza Main ############# -->
-    ###################################################################################
-    */
-
-  /* container */
 
   .content {
     margin: 10px;
-    grid-template-rows: 500px auto auto auto auto;
-    grid-template-columns: auto;
-    grid-template-areas:
-      "headimage "
-      "primerasection "
-      "mainnav "
-      "tercerasection "
-      "cuartasection "
   }
 
   /* ***********+++First section++++************* */
+  .primerasection h2 {
+    font-size: 30px;
+  }
+
   .contenedorprimera {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-right: 50%;
   }
 
   .icono1 {
@@ -1114,19 +796,10 @@
 
   }
 
-  .icono2 {
-    flex: 1 1 50px;
-    width: 500px;
-  }
-
-  .icono3 {
-    flex: 1 1 50px;
-    width: 500px;
-  }
-
   .button3 {
     width: 220px;
     height: 70px;
+    margin-left: 0;
   }
 
   .lee {
@@ -1134,48 +807,10 @@
     height: 150px;
   }
 
-  .aprende {
-    width: 150px;
-    height: 150px;
-  }
-
-  .practica {
-    width: 150px;
-    height: 150px;
-  }
-
-  /* ***********+++Nav++++************* */
-
-  .item_menuvertical {
-    flex: 1 0 30px;
-    background-color: rgb(24, 240, 168);
-    width: 30%;
-    margin: auto;
-  }
-
-  .item_menuvertical a {
-    text-decoration: none;
-    transition: all .9s;
-    font-size: 12px;
-    margin-left: 4%;
-
-  }
-
-  .item_menuvertical :hover {
-    font-size: 14px;
-  }
-
   /* ***********+++Third Section++++************* */
 
   .contenedorter {
-    grid-template-columns: 1fr;
-    grid-gap: 5px;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-      "cajater1 "
-      "cajater2 "
-      "cajater3"
-
+    flex-direction: column;
   }
 
   /**** First card ******/
@@ -1190,84 +825,47 @@
 
   }
 
-  /***** Second Card *******/
-
-  .cajater2:hover {
-    transform: translateY(5px);
-
-  }
-
-  .imgter2 {
-    width: 200px;
-    margin-left: 50px;
-
-  }
-
-
-  /********* Third Card *********/
-
-  .cajater3:hover {
-
-    transform: translateY(5px);
-
-  }
-
-  .imgter3 {
-    width: 200px;
-    margin-left: 50px;
-
-  }
-
   /* ***********+++fourth Section++++************* */
-
-  .imagcuar4 {
+  .cajacuar img {
     width: 400px;
+    float: initial;
 
   }
 
-  .sobre {
+  .cuartasection h2 {
     font-size: 40px;
   }
 
-  /* #########################Sidebar########################################
-    ################################################################################### */
+  /* Sidebar */
+
   .side {
     display: none;
   }
 
-  /* #########################++FOOTER++########################################
-    ################################################################################### */
-
-
-  /* container */
-  .footer-container {
-    grid-gap: 30px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "logo "
-      "social"
-      "contact"
-      "novedades";
+  /* +FOOTER+ */
+  .footer {
+    flex-direction: column;
   }
 
-  /* logo */
-  .footer-logo {
-    grid-area: logo;
+  /*FIRST BLOCK*/
+  .logocontact {
     display: none;
   }
 
-  .logo2 {
+  /*SECOND BLOCK*/
+  .news {
+    flex: 1 200px;
+    align-self: center;
+  }
+
+  /*THIRD BLOCK*/
+  .navegationfoot {
     display: none;
 
   }
 
-  /* nav */
-  .footer-nav {
-    display: none;
-  }
-
-  .footer-secondary-nav {
+  /*FOURTH BLOCK*/
+  .navegationfootsecondary {
     display: none;
   }
 
@@ -1286,15 +884,5 @@
   .twiterc {
     width: 40px;
     height: 40px;
-  }
-
-  /* contact */
-  .contact-block {
-    margin-left: 10px;
-  }
-
-  .contact-block a {
-    width: 90%;
-
   }
 }

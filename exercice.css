@@ -1,0 +1,482 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 19px;
+  }
+  
+  /*HEADER***************************************************/
+  
+  /*Search*/
+  
+  .busqueda {
+    display: flex;
+    background-color: rgb(233, 215, 195);
+    flex-direction: row;
+  }
+  
+  .busca {
+    flex: 1 100px;
+  
+  }
+  
+  .social1 {
+    flex: 1 80%;
+  }
+  
+  .lupa {
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  .buttonbuscar {
+    background: #0b5b5d;
+    padding: 20px;
+    border-radius: 6px;
+    transition: 0.7s;
+    height: 30px;
+    background-image: url(img/lupa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: right;
+    border-radius: 15px;
+  
+  }
+  
+  .buttonbuscar:hover {
+    letter-spacing: 3px;
+    background: rgb(175, 102, 102);
+    transition: all 0.6s ease 0s;
+  }
+  
+  /* social network */
+  .facebookc1 {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .instagramc1 {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .twiterc1 {
+    width: 35px;
+    height: 35px;
+  }
+  
+  /*Navigacion Header*/
+  .main-head {
+    background-color: #0097A7;
+    display: flex;
+    flex-direction: row;
+    min-width: 450px;
+  }
+  
+  .main-head .logo {
+    flex: 1 200px;
+    order: 0;
+    background-color: #0097A7;
+  }
+  
+  .main-head .titulo {
+    flex: 1 200px;
+    order: 1;
+    font-size: 120px;
+    font-family: cursive;
+    color: #f3e0e0;
+  
+  
+  }
+  
+  .headnav {
+    flex: 1 200px;
+    order: 3;
+    background-color: #0097A7;
+  
+  }
+  
+  .menuhead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 5px;
+  
+  }
+  
+  .item_menuhead {
+    flex: 0 1 100px;
+    list-style-type: none;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  .menuhead li a {
+    transition: all .9s;
+    font-size: 20px;
+    color: rgb(195, 180, 197);
+  }
+  
+  .menuhead li a:hover {
+    background-color: rgb(222, 160, 233);
+    color: white;
+    font-size: 25px;
+    border-color: #b65;
+  }
+  
+  #hamburguesa {
+    flex: 1 200px;
+    order: 0;
+  
+  }
+  
+  /* MAIN  ************************************************/
+
+  
+
+  
+  /* FOOTER********************************************** */
+  
+  /* container */
+  .footer {
+    min-width: 450px;
+    color: #fff;
+    background: #0097A7;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /*FIRST BLOCK*/
+  .logocontact {
+    flex: 1 300px;
+  }
+  
+  /*SECOND BLOCK*/
+  .news {
+    flex: 1 400px;
+  }
+  
+  /*THIRD BLOCK*/
+  .navegationfoot {
+    flex: 1 100px;
+  
+  }
+  
+  /*FOURTH BLOCK*/
+  .navegationfootsecondary {
+    flex: 1 100px;
+  }
+  
+  .contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 80%;
+    color: #f939a9;
+    background-color: rgba(0, 0, 0, 0.424);
+  }
+  
+  .contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+  }
+  
+  .social-networks {
+    margin-top: 60px;
+    border-bottom: 2px solid #f99639;
+    text-align: center;
+  }
+  
+  
+  .logo2 {
+    height: 250px;
+    width: 250px;
+  }
+  
+  .footer-nav,
+  .footer-secondary-nav {
+    list-style: none;
+    color: #f939a9;
+  }
+  
+  .footer-nav a,
+  .footer-secondary-nav a {
+    list-style: none;
+    color: #c7a5b9f1;
+  }
+  
+  .facebookc {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .instagramc {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .twiterc {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .news .novedades {
+    text-align: right;
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+  
+  .news .novedades p {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .news .novedades input {
+    text-align: center;
+    border-radius: 25px;
+  
+  }
+  
+  .news .novedades input:first-child {
+    height: 2rem;
+  }
+  
+  .news .novedades input:last-child {
+    height: 35px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    background-color: #f99639;
+    width: 100px;
+    font-weight: bold;
+  
+  }
+  
+  /*
+    ###################################**extra Large**###############################################
+  */
+  @media (min-width: 1300px) {
+    #hamburguesa {
+      display: none;
+    }
+  }
+  
+  /*
+    ###################################**Large**###############################################
+  */
+  
+  @media (min-width: 995px) and (max-width: 1299px) {
+    #hamburguesa {
+      display: none;
+    }
+  
+    .content {
+      margin: 5px;
+  
+    }
+   
+    /* container */
+  
+    .footer-nav {
+      display: none;
+    }
+  
+    .footer-secondary-nav {
+      display: none;
+    }
+  }
+  
+  /* 
+    ###################################**Medium**###############################################
+   */
+  @media (min-width: 576px) and (max-width: 995px) {
+    #hamburguesa {
+      display: none;
+    }
+  
+    .logo1 {
+      margin-top: 0px;
+      height: 100px;
+      width: 100px;
+  
+    }
+  
+    .titulo {
+      display: none;
+    }
+  
+    /* navigation */
+  
+    .menuhead li a {
+      transition: all .9s;
+      font-size: 16px;
+      color: rgb(195, 180, 197);
+    }
+  
+    .menuhead li a:hover {
+      font-size: 16px;
+    }
+  
+    /*Footer*/
+    /* nav */
+  
+    .footer-nav {
+      display: none;
+    }
+  
+    .footer-secondary-nav {
+      display: none;
+    }
+  
+    .contact-block a {
+      width: 90%;
+  
+    }
+  }
+  
+  /* 
+    
+    ###################################**Small**###############################################*/
+  @media (min-width: 0px) and (max-width: 576px) {
+    * {
+      font-size: 15px;
+    }
+  
+    /*
+        <!--header -->*/
+    .busqueda {
+      display: none;
+  
+    }
+  
+    .headnav {
+      display: none;
+    }
+  
+    #hamburgMenu {
+  
+      flex: 1 200px;
+      display: block;
+  
+    }
+  
+    .hamburgMenu,
+    .submenu1 {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .hamburgMenu a {
+      display: block;
+      background-color: #5a8cad;
+      text-decoration: none;
+      padding: 10px;
+      color: rgb(255, 255, 255);
+  
+    }
+  
+    .hamburgMenu a:hover {
+      background-color: rgba(61, 56, 56, 0);
+    }
+  
+    .hamburgMenu li:hover .submenu1 {
+      display: block;
+      max-height: 200px;
+    }
+  
+    .submenu1 a {
+      background-color: rgba(251, 207, 207, 0.192);
+    }
+  
+    .submenu1 a:hover {
+      background-color: rgb(148, 230, 219);
+    }
+  
+    .submenu1 {
+      overflow: hidden;
+      max-height: 0;
+      transition: all 0.5s ease-out;
+    }
+  
+    /* logo of de web */
+    .logo1 {
+      height: 100px;
+      margin-left: 150px;
+      width: 100px;
+    }
+  
+    .logo {
+      order: 2;
+    }
+  
+    /* title */
+    .titulo {
+      display: none;
+  
+    }
+  
+    /* Main container */
+    .contenedor {
+      display: block;
+    }
+  
+    /* ****Nav*/
+    .side {
+      display: none;
+    }
+  
+    /*++FOOTER++ */
+    .footer {
+      flex-direction: column;
+    }
+  
+    /*FIRST BLOCK*/
+    .logocontact {
+      display: none;
+    }
+  
+    /*SECOND BLOCK*/
+    .news {
+      flex: 1 200px;
+      align-self: center;
+    }
+  
+    /*THIRD BLOCK*/
+    .navegationfoot {
+      display: none;
+  
+    }
+  
+    /*FOURTH BLOCK*/
+    .navegationfootsecondary {
+      display: none;
+    }
+  
+    /* socila network */
+  
+    .facebookc {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .instagramc {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .twiterc {
+      width: 40px;
+      height: 40px;
+    }
+  
+  }
