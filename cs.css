@@ -441,6 +441,14 @@ article#c5 input {
   ###################################**Medium**###############################################
  */
 @media (min-width: 576px) and (max-width: 995px) {
+
+  .contenedor{
+    flex-direction: column;
+  }
+  .side{
+    margin:6px;
+    margin-bottom: 10%;
+  }
   #hamburguesa {
     display: none;
   }
