@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="blog1.css">
+    <link rel="stylesheet" href="blog2.css">
     <link rel="stylesheet" href="cs.css">
     <title>Document</title>
 </head>
@@ -61,126 +61,167 @@
     <main class="contenedor">
         <section class="content">
             <article class="explicacion">
-                <h1> The CSS Box Model</h1>
+                <h1> CSS Selectors</h1>
                 <br>
                 <br>
 
-                <p> Everything in CSS has a box around it, and understanding these boxes is key to being able to create
-                    layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at
-                    the CSS Box Model so that you can build more complex layout tasks with an understanding
-                    of how it works and the terminology that relates to it.</p>
+                <p> CSS selectors are used to "find" (or select) the HTML elements you want to style.
+                    <br><br>We can divide CSS selectors into five categories:
+                    <br><br><br>
+                    <ul type="circle">
+                        <li> <b>Simple selectors:</b> select elements based on name, id, class. </li>
+                        <br>
+                        <li><b>Combinator selectors :</b> select elements based on a specific relationship between them.
+                        </li>
+                        <br>
+                        <li> <b>Pseudo-class selectors :</b> select elements based on a certain state.</li>
+                        <br>
+                        <li><b>Pseudo-elements selectors :</b> select and style a part of an element. </li>
+                        <br>
+                        <li><b>Attribute selectors :</b> select elements based on an attribute or attribute value. </li>
+
+                    </ul>
+
+                </p>
+
                 <br>
                 <br>
                 <hr>
                 <br>
-                <h3>What is the CSS box model?</h3>
+                <h3>The CSS element Selector</h3>
                 <br>
                 <p>
-                    The full CSS box model applies to block boxes, inline boxes only use some of the behavior defined in
-                    the box model. The model defines how the different parts of a box — margin, border, padding, and
-                    content — work together to create a box that you can see on the page. To add some additional
-                    complexity, there is a standard and an alternate box model.
-                </p><br><br><br><br>
-                <h4><span>Parts of a box</h4>
+                    The element selector selects HTML elements based on the element name.
+                </p><br><br>
+                <h4><span>Example</h4>
                 <br>
-                <p>Making up a block box in CSS we have the:
-                    <br>
-                    <br><br>
-                    <ul type="circle">
-                        <li> <b>Content box:</b> The area where your content is displayed, which can be sized using
-                            properties
-                            like width and height.
-                        </li>
-                        <br><br>
-                        <li><b>Padding box:</b> The padding sits around the content as white space; its size can be
-                            controlled
-                            using
-                            padding and related properties.
-                        </li>
-                        <br><br>
-                        <li> <b>Border box:</b> The border box wraps the content and any padding. Its size and style can
-                            be
-                            controlled
-                            using border and related properties.
-                        </li>
-                        <br><br>
-                        <li><b> Margin box:</b> The margin is the outermost layer, wrapping the content, padding and
-                            border as
-                            whitespace between this box and other elements. Its size can be controlled using margin and
-                            related
-                            properties.
-                        </li>
-                    </ul>
+                <p>
+                    Here, all p elements on the page will be center-aligned, with a red text color:
+
+                    <br><br><br>
+                    <pre class="css">
+ p {
+ text-align: center;
+ color: red; }
+                                  <!-- meter el ejemplo con css -->
+                            </pre><br><br><br>
                 </p>
-                <img src="imgblog1/1.PNG" class="imgblog1">
+                <hr class="example"><br>
+                <p id="para1">Hello World!</p>
+                <p>This paragraph is not affected by the style.</p>
+                <br>
+                <hr class="example">
+                <br>
+                <br>
 
 
-                <h4><span> The standard CSS box model</span></h4>
-                <p> In the standard box model, if you give a box a width
-                    and a height, this defines the width and height of the
-                    content box. Any padding and border is then added to
-                    that width and height to get the total size taken up
-                    by the box. This is shown in the image below.
+                <h3>The CSS id Selector</h3>
+                <br>
+                <p>
+                    The id selector uses the id attribute of an HTML element to select a specific element. <br>
 
-                    If we assume that the box has the following CSS
-                    defining width, height, margin, border, and padding: <br><br><br>
+                    The id of an element is unique within a page, so the id selector is used to select one unique
+                    element! <br>
+
+                    To select an element with a specific id, write a hash (#) character, followed by the id of the
+                    element.
+                </p><br><br><br><br>
+                <h4><span>Example</h4>
+                <br>
+                <p>
+                    The CSS rule below will be applied to the HTML element with id="para1": <br><br>
 
                     <pre class="css">
-                .box {
-                width: 350px;
-                height: 150px;
-                margin: 25px;
-                padding: 25px;
-                border: 5px solid black;
-                }
-                  <!-- meter el ejemplo con css -->
-            </pre><br><br><br>
-                    The space taken up by our box using the
-                    standard box model will actually be
-                    410px (350 + 25 + 25 + 5 + 5), and the
-                    height 210px (150 + 25 + 25 + 5 + 5),
-                    as the padding and border are added to
-                    the width used for the content box.</p>
-                    <br><br>
-                <img src="imgblog1/standardboxmodel.png" alt=""><br><br>
-
+#para1 {
+text-align: center;
+color: red; }
+                                      <!-- meter el ejemplo con css -->
+                                </pre><br><br><br>
+                </p>
+                <hr class="example"><br>
+                <p id="para1">Every paragraph will be affected by the style.</p>
+                <p id="para1">Me too!</p>
+                <p id="para1">And me!</p>
+                <hr class="example">
+                <br>
+                <br>
                 <p class="nota">
 
-                  <b>Note:</b> The margin is not counted towards the actual size of the box — sure,
-                    it affects the total space that the box will take up on the page, but only
-                    the space outside the box. The box's area stops at the border — it does not
-                    extend into the margin.
+                    <b>Note:</b> An id name cannot start with a number!
                 </p>
-<br><br><br><br>
-                 <h4>Here is the calculation:</h4>
-                 <p>
+
+                <h3>The CSS class Selector</h3>
+                <br>
+                <p>
+                    The class selector selects HTML elements with a specific class attribute.
+
+                    To select elements with a specific class, write a period (.) character, followed by the class name.
+                </p><br><br><br><br>
+                <h4><span>Example</h4>
+                <br>
+                <p>
+                    In this example all HTML elements with class="center" will be red and center-aligned: : <br><br>
+
+                    <pre class="css">
+        .center{
+        text-align: center;
+        color: red; }
+                                              <!-- meter el ejemplo con css -->
+                                        </pre><br><br><br>
+                </p>
+                <hr class="example"><br>
+                <h6 id="para1">Red and center-aligned heading</h6>
+                <p id="para1">Red and center-aligned paragraph.</p> <br>
+
+                <hr class="example">
+                <br>
+                <br>
+                <p class="nota">
+
+                    <b>Note:</b>A class name cannot start with a number!!
+                </p>
+
+                <br><br><br><br>
+                <h3>The CSS Universal Selector</h3>
+                <br>
+                <p>
+                    The universal selector (*) selects all HTML elements on the page.
+                </p><br><br><br><br>
+
                 <pre class="css">
-                 320px (width)
-                 + 20px (left + right padding)
-                 + 10px (left + right border)
-                 + 0px (left + right margin)
-                 = 350px
-                </pre>
+                        *{
+                        text-align: center;
+                        color: red; }
+                                                              <!-- meter el ejemplo con css -->
+                                                        </pre><br><br><br>
 
-                <!-- meter el ejemplo con css -->
-                <br><br><br>
-                 The total width of an element should be calculated like this:
-                 
-                 Total element width = width + left padding + right padding + left border + right border + left margin + right margin
-                 
-                 The total height of an element should be calculated like this:
-                 
-                 Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
-                 <br><br><br><br>
-                 </p>
+                <br><br><br><br>
+                <h3>The CSS Grouping Selector</h3>
+                <br>
+                <p>
+                    The grouping selector selects all the HTML elements with the same style definitions.
+
+                    Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+                </p><br><br><br><br>
 
 
+                <pre class="css">
+                        h1, h2, p {
+                        text-align: center;
+                        color: red; }
+                         
+                                                              <!-- meter el ejemplo con css -->
+                </pre><br><br><br>
 
 
+                <h3>The CSS Grouping Selector</h3>
+                <br>
+                <br>
+                <br>
 
+                <img src="imgblog2/1.PNG" alt="">
 
-
-
+<br><br><br>
 
 
 

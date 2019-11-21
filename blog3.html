@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="blog3.css">
+    <link rel="stylesheet" href="cs.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!--##### ##########Aqui empieza header############# -->
+    <header>
+        <!-- <div class="cuerpoheader"> -->
+
+        <section class="busqueda">
+            <article class="social1">
+
+                <img src="img/facebook.png" class="facebookc1" alt="facebook">
+                <img src="img/instagram.png" class="twiterc1" alt="twitter">
+                <img src="img/twitter.png" class="instagramc1" alt="instagram">
+            </article>
+            <article class="busca">
+                <input type="search" id="search" placeholder="Search..." class="buttonbuscar" />
+
+            </article>
+        </section>
+
+        <section class="main-head">
+            <nav class="headnav">
+                <ul class="menuhead">
+                    <li class="item_menuhead"><a href="index.html">Home</a></li>
+                    <li class="item_menuhead"><a href="css.html">Css</a></li>
+                    <li class="item_menuhead"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <nav id="hamburguesa">
+                <ul class="hamburgMenu">
+                    <li><img src="img/menu.png" alt="" width="70px" height="70px"></a>
+                        <ul class="submenu1">
+                            <li><a href="index.html"> Home</a></li>
+                            <li><a href="css.html">Css</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                        </ul>
+
+                </ul>
+            </nav>
+
+            <div class="logo">
+                <img src="img/milogo.png" class="logo1" alt="logo1">
+            </div>
+            <h1 class="titulo"> EasyCss</h1>
+        </section>
+    </header>
+    <!--##### ##########Aqui empieza El Main############# -->
+    <main class="contenedor">
+        <section class="content">
+            <article class="explicacion">
+                <h1> CSS Flexbox</h1>
+
+                <br><br><br>
+                <p>
+                    The flex property is a shorthand property for: <br> <br>
+                    <ul type="circle" class="lista">
+                        <li> flex-grow</li>
+                        <li>flex-shrink</li>
+                        <li> flex-basis</li>
+                        <li> The flex property sets the flexible length on flexible items.</li>
+                    </ul>
+                </p>
+                <div id="contenedorflex">
+                    <div class="contiene">
+                        <!-- **********item1*******************  -->
+                        <div class="item1">
+
+                            <img src="imgblog3/container.svg" alt="">
+                        </div>
+                        <!-- **********item2*******************  -->
+
+                        <div class="item2">
+                            <h2>display</h2>
+                            <p> This defines a flex container; inline or block depending on the given value.
+                                It enables a flex context for all its direct children.</p>
+
+                            <pre class="css">
+ .container {
+ display: flex; }
+                                 
+                        </pre>
+                            <p class="nota">
+                                Note that CSS columns have no effect on a flex container.
+                            </p>
+
+                        </div>
+
+                        <!-- **********item3*******************  -->
+                        <div class="item3">
+                            <h2>Flex-direction</h2> <br>
+                            <img src="imgblog3/Captura.PNG" alt=""><br><br>
+                            <p>This establishes the main-axis, thus defining the direction flex items are placed in the
+                                flex container. Flexbox is (aside from optional wrapping) a single-direction layout
+                                concept. Think of flex items as primarily laying out either in horizontal rows or
+                                vertical columns.</p> <br> <br>
+                            <pre class="css">
+    .container {
+    flex-direction: row | row-reverse
+    | column | column-reverse; }
+                                                                        
+                                    </pre>
+                            <ul type="circle" class="lista">
+                                <li><b> row (default):</b> left to right in ltr; right to left in rtl</li>
+                                <li><b>row-reverse:</b>right to left in ltr; left to right in rtl</li>
+                                <li> <b>column:</b>same as row but top to bottom</li>
+                                <li> <b> column-reverse: </b>same as row-reverse but bottom to top.</li>
+                            </ul>
+
+
+
+                        </div>
+
+
+                        <!-- **********item4*******************  -->
+
+                        <div class="item4">
+                            <h2>flex-wrap</h2> <br>
+                            <img src="imgblog3/wrap.png" alt=""><br><br>
+                            <p>By default, flex items will all try to fit onto one line.
+                                You can change that and allow the items to wrap as needed with this property.</p> <br>
+                            <br>
+                            <pre class="css">
+        .container {
+            flex-wrap: nowrap
+            | wrap | wrap-reverse;}
+         
+                                                                            
+                                        </pre>
+                            <ul type="circle" class="lista">
+                                <li><b> nowrap (default) :</b> all flex items will be on one line</li>
+                                <li> <b>wrap:</b>flex items will wrap onto multiple lines, from top to bottom.</li>
+                                <li> <b>wrap-reverse: </b>flex items will wrap onto multiple lines from bottom to top.
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+                        <!-- **********item5*******************  -->
+                        <div class="item5">
+                            <h2>flex-flow</h2> <br>
+                            <p>This is a shorthand for the flex-direction and flex-wrap properties, which together
+                                define the
+                                flex container's main and cross axes. The default value is row nowrap.</p>
+
+                        </div>
+
+                        <!-- **********item6*******************  -->
+
+                        <div class="item6">
+                                <h2>justify-content</h2> <br>
+                                <img src="imgblog3/justify-content.svg" alt="" >
+                                <p>
+                                        This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size.
+                                         It also exerts some control over the alignment of items when they overflow the line.
+
+                                </p>
+                                <pre class="css">
+                                        .container {
+                                            justify-content: flex-start | flex-end |
+                                            center | space-between | space-around | 
+                                            space-evenly | start | end | left |
+                                            right ... + safe | unsafe;
+                                         
+                                                                                                            
+                                     </pre>
+
+                        </div>
+
+                        <!-- **********item7*******************  -->
+<!-- align items -->
+                        <div class="item7">
+
+
+                        </div>
+
+                        <!-- **********item8*******************  -->
+<!-- align content -->
+                        <div class="item8">
+
+
+
+                        </div>
+                    </div>
+
+                    <!-- #################elemento############################ -->
+                    <div class="elemento">
+                        <!-- **********item9*******************  -->
+                        <div class="item9"> <img src="imgblog3/items.svg" alt=""></div>
+                        <!-- **********item10*******************  -->
+                        <div class="item10">
+
+
+
+                        </div>
+                        <!-- **********item11*******************  -->
+
+
+                        <div class="item11">
+
+
+
+                        </div>
+
+                        <!-- **********item12*******************  -->
+
+                        <div class="item12">
+
+
+
+                        </div>
+
+                        <!-- **********item13*******************  -->
+
+                        <div class="item13">
+
+
+                        </div>
+
+
+                        <!-- **********item14*******************  -->
+                        <div class="item14">
+
+
+                        </div>
+
+                        <!-- **********item15*******************  -->
+
+                        <div class="item15">
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </article>
+
+        </section>
+
+        <aside class="side">
+
+            <nav class="navigation">
+                <ul class="mainmenu">
+                    <li><a href="">Lesson1</a>
+                        <ul class="submenu">
+                            <li><a href="blog1.html">Learn</a></li>
+                            <li><a href="exercice.html#act1">Exercises</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="blog2.html">Lesson2</a>
+                        <ul class="submenu">
+                            <li><a href="">Learn</a></li>
+                            <li><a href="exercice.html#act2">Exercises</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="">Lesson3</a>
+                        <ul class="submenu">
+                            <li><a href="blog3.html">Learn</a></li>
+                            <li><a href="exercice.html#act3">Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Lesson4</a>
+                        <ul class="submenu">
+                            <li><a href="blog4.html">Learn</a></li>
+                            <li><a href="exercice.html#act4">Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Lesson5</a>
+                        <ul class="submenu">
+                            <li><a href="blog5.html">Learn</a></li>
+                            <li><a href="exercice.html#act5">Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Lesson6</a>
+                        <ul class="submenu">
+                            <li><a href="blog6.html">Learn</a></li>
+                            <li><a href="exercice.html#act6">Exercises</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </aside>
+
+
+    </main>
+
+    <!--##### ##########Aqui empieza El footer############# -->
+    <footer class="footer">
+        <section class="logocontact">
+            <article class="footer-logo">
+                <img src="img/milogo.png" class="logo2" alt="Footer Logo">
+            </article>
+
+
+            <article class="contact-block">
+                <h3>We're happy to hear from you!</h3>
+                <a href="tel:698567895"> 698 56 78 95</a>
+                <a href="EasyCss@company.es">EasyCss@company.es</a>
+            </article>
+
+        </section>
+        <section class="navegationfoot">
+            <ul class="footer-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Lessons</a></li>
+                <li><a href="#">Our Work</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </section>
+        <section class="navegationfootsecondary">
+            <ul class="footer-secondary-nav">
+                <li><a href="#">Latest News</a></li>
+                <li><a href="#">Our Partners</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Css</a></li>
+                <li><a href="#">Activity</a></li>
+            </ul>
+        </section>
+        <section class="news">
+
+            <article class="social-networks">
+                <h3>Share our content!</h3>
+                <br><br>
+                <img src="img/facebook.png" class="facebookc" alt="">
+
+                <img src="img/instagram.png" class="twiterc" alt="">
+
+                <img src="img/twitter.png" class="instagramc" alt="">
+
+            </article><!-- .social-networks-->
+            <article class="novedades">
+                <p>
+                    Subscribe to our Newsletter
+                </p>
+                <form action="post">
+                    <input type="email" name="Enter Your Email Address" size="20">
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+            <!-- <div class="buttom-line">
+                        <p>Created by Wissy Teb</p>
+    
+                            <p>Terms of use </p>
+                            <p>Privacy</p>
+                            <p>Legal</p>
+                    </div> -->
+        </section>
+
+
+
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
