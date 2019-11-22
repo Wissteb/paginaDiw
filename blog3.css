@@ -1,40 +1,70 @@
 .explicacion{
     margin:7%;
 }
-.imgblog1{
 
+#contenedorflex img{
+    width: 100%;
+    height: auto;
+   
+}
+#contenedorflex h1{
+    font-size: 35px;
+    color: rgb(170, 100, 49);
+}
+#contenedorflex h3{
+    font-size: 35px;
+    color: rgb(170, 100, 49);
 
 }
+.css{
+    background-color: rgb(43, 42, 44);
+    color: rgb(190, 182, 151);
+    border: rgb(220, 133, 20) solid 2px;
+
+}
+
 .lista{
     margin-left: 6%;
 }
 
 #contenedorflex{
     display: flex;
-    flex-direction: row;
-
+    flex-direction:row;
+    width:auto ;
+  
 }
-
+#contenedorflex h2{
+ font-size:35px;
+ color: rgb(141, 65, 228);
+  
+}
+.flex{
+    font-size: 50px;
+    color: rgb(158, 116, 158);
+}
 .contiene{
-    flex: 1 600px;
-    background-color: chocolate;
+    flex: 1 1 100px;
+    flex-direction: column;
+
+   
 }
 .elemento{
-    flex: 1 600px;
-    background-color: chocolate;
+    flex: 1 1 100px;
+    flex-direction: column;
 
 }
 .item1 ,.item2, .item3,.item4,.item5,.item6,.item7,.item8{
-background-color: rgb(50, 46, 54);
-flex:1 400px;
-height: 900px;
-margin: 5%;
+width:500px ;
+margin: 2%;
+padding: 5%;
+box-shadow: rgb(228, 153, 104) 5px 5px 5px 5px;
 }
-.item9 ,.item10, .item11,.item12,.item15,.item16,.item17,.item18{
-    background-color: rgb(50, 46, 54);
-    flex:1 400px;
-    height: 400px;
-    margin: 5%;
+.item9 ,.item10, .item11,.item13,.item12,.item14,.item15,.item16,.item17{
+
+    width:500px ;
+    margin: 2%;
+    padding: 5%;
+    box-shadow: rgb(228, 153, 104) 5px 5px 5px 5px;
     }
 
 @media (min-width: 1300px) {
@@ -47,6 +77,9 @@ margin: 5%;
 
   }
 
-  @media (min-width: 576px) and (max-width: 995px) {
-      
+  @media (min-width: 0px) and (max-width: 995px) {
+    #contenedorflex{
+        flex-direction:column;
+    }
+    
   }

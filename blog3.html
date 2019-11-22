@@ -61,7 +61,7 @@
     <main class="contenedor">
         <section class="content">
             <article class="explicacion">
-                <h1> CSS Flexbox</h1>
+                <h1 class="flex"> CSS Flexbox</h1>
 
                 <br><br><br>
                 <p>
@@ -73,11 +73,13 @@
                         <li> The flex property sets the flexible length on flexible items.</li>
                     </ul>
                 </p>
+                <br> <br>
                 <div id="contenedorflex">
                     <div class="contiene">
                         <!-- **********item1*******************  -->
                         <div class="item1">
-
+                            <h1>Properties for the Parent
+                                (flex container)</h1> <br> <br>
                             <img src="imgblog3/container.svg" alt="">
                         </div>
                         <!-- **********item2*******************  -->
@@ -161,19 +163,22 @@
                         <!-- **********item6*******************  -->
 
                         <div class="item6">
-                                <h2>justify-content</h2> <br>
-                                <img src="imgblog3/justify-content.svg" alt="" >
-                                <p>
-                                        This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size.
-                                         It also exerts some control over the alignment of items when they overflow the line.
+                            <h2>justify-content</h2> <br>
+                            <img src="imgblog3/justify-content.svg" alt="">
+                            <p>
+                                This defines the alignment along the main axis. It helps distribute extra free space
+                                leftover when either all the flex items on a line are inflexible, or are flexible but
+                                have reached their maximum size.
+                                It also exerts some control over the alignment of items when they overflow the line.
 
-                                </p>
-                                <pre class="css">
-                                        .container {
-                                            justify-content: flex-start | flex-end |
-                                            center | space-between | space-around | 
-                                            space-evenly | start | end | left |
-                                            right ... + safe | unsafe;
+                            </p>
+                            <pre class="css">
+                                <br>
+.container {
+justify-content: flex-start | flex-end |
+center | space-between | space-around | 
+space-evenly | start | end | left |
+right ... + safe | unsafe;}
                                          
                                                                                                             
                                      </pre>
@@ -181,43 +186,171 @@
                         </div>
 
                         <!-- **********item7*******************  -->
-<!-- align items -->
+                        <!-- align items -->
                         <div class="item7">
+                            <h2>align-items</h2> <br>
+                            <img src="imgblog3/align-items.svg" alt="">
+                            <br><br><br>
+                            <p>This defines the default behavior for how flex items are laid out along the cross axis on
+                                the current line.
+                                Think of it as the justify-content version for the cross axis (perpendicular to the
+                                main-axis).</p>
+                            <pre class="css">
+.container {
+jalign-items: stretch | flex-start |
+flex-end | center |baseline |
+first baseline | last baseline |
+start | end | self-start |
+self-end + ... safe | 
+unsafe;}
+                                         
+                                                                                                            
+                                     </pre>
 
 
                         </div>
 
                         <!-- **********item8*******************  -->
-<!-- align content -->
+                        <!-- align content -->
                         <div class="item8">
-
-
-
+                            <p>
+                                <h3 class="example">Example </h3>
+                                <pre class="css">
+ .flex-container {
+padding: 0;
+margin: 0;
+list-style: none;
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-flex-flow: row wrap;
+justify-content: space-around;}
+                                  
+                                  
+.flex-item {
+background: tomato;
+padding: 5px;
+width: 200px;
+height: 150px;
+margin-top: 10px;
+line-height: 150px;
+color: white;
+font-weight: bold;
+font-size: 3em;
+text-align: center; }
+                                 
+</pre>
+                            </p>
                         </div>
                     </div>
 
                     <!-- #################elemento############################ -->
-                    <div class="elemento">
-                        <!-- **********item9*******************  -->
-                        <div class="item9"> <img src="imgblog3/items.svg" alt=""></div>
-                        <!-- **********item10*******************  -->
-                        <div class="item10">
 
+
+                    <div class="elemento">
+                        <div class="elemento">
+                            <!-- **********item******************  -->
+
+                            <div class="item17">
+                                <h1>Properties for the Children
+                                    (flex items)</h1><br> <br>
+                                <img src="imgblog3/items.svg" alt=""> 
+                            </div>
+
+
+
+                            <!-- **********item9*******************  -->
+
+                            <div class="item10">
+
+                                <img src="imgblog3/order.svg" alt=""> <br><br>
+
+                                <h2>order</h2> <br>
+
+                                <p>By default, flex items are laid out in the source order.
+                                    However, the order property controls the order in which they appear in the flex
+                                    container.</p>
+
+
+                                <pre class="css">
+ .item {
+ order:"integer"; /* default is 0 */
+ }
+                                                                       
+                                             </pre>
+
+
+                            </div>
+                            <!-- **********item10*******************  -->
+                            <div class="item11">
+
+                                <img src="imgblog3/flex-grow.svg" alt=""> <br><br>
+                                <h2>flex-grow</h2> <br>
+
+                                <p>This defines the ability for a flex item to grow if necessary. It accepts a unitless
+                                    value that serves as a proportion. It dictates what amount of the available
+                                    space inside the flex container the item should take up.
+
+                                    If all items have flex-grow set to 1, the remaining space in the container will be
+                                    distributed
+                                    equally to all children. If one of the children has a value of 2, the remaining
+                                    space
+                                    would
+                                    take up twice as much space as the others (or it will try to, at least)..</p>
+
+
+                                <pre class="css">
+item {
+flex-grow: "number";
+ /* default 0 */
+}
 
 
                         </div>
                         <!-- **********item11*******************  -->
 
+                        
 
-                        <div class="item11">
+                        <div class="item12"><br><br>
 
+
+
+
+
+                            <h2>flex-shrink</h2> <br>
+
+                            <p>This defines the ability for a flex item to shrink if necessary.</p> <br><br>
+    
+    
+                            <pre class="css">
+.item {
+flex-shrink: "number";
+ /* default 1 */ }
+                                     
+
+                            <p>Negative numbers are invalid.</p>
+<br><br>
+                  
 
 
                         </div>
 
                         <!-- **********item12*******************  -->
 
-                        <div class="item12">
+                        <div class="item13">
+                                <img src="imgblog3/align-content.svg" alt=""> <br><br>
+                                <h2>flex-basis</h2> <br>
+    <br><br><br>
+                                <p>This defines the default size of an element before the remaining space is distributed.
+                                 It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property" (which was temporarily done by the main-size keyword until deprecated). The content keyword means "size it based on the item's content" - this keyword isn't well supported yet, so it's hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</p>
+    
+    <br><br>
+                                <pre class="css">
+  item {
+flex-basis: ""length" |
+ auto; /* default auto */ } <br><br>
 
 
 
@@ -225,54 +358,80 @@
 
                         <!-- **********item13*******************  -->
 
-                        <div class="item13">
-
-
-                        </div>
-
-
-                        <!-- **********item14*******************  -->
                         <div class="item14">
+                               
+                                <h2>flex</h2> <br>
+    <br><br><br>
+                                <p>This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.</p>
+    
+    <br><br>
+                                <pre class="css">
+.item {
+flex: none | [ 'flex-grow' 
+'flex-shrink'? || 'flex-basis' ] }
+  <br><br>
+                                </pre>
+
+                                <p class="nota">
+                                    It is recommended that you use this shorthand property
+                                    rather than set the individual properties.
+                                    The shorthand sets the other values intelligently.
+                                </p>
 
 
+
+                            </div>
+
+
+                            <!-- **********item14*******************  -->
+                            <div class="item15">
+                                <img src="imgblog3/align-self.svg" alt=""> <br><br>
+                                <h2>align-self</h2> <br>
+                                <br><br><br>
+                                <p>This allows the default alignment (or the one specified by align-items) to be
+                                    overridden for individual flex items.
+
+                                    Please see the align-items explanation to understand the available values.</p>
+
+                                <br><br>
+                                <pre class="css">
+ .item {
+ align-self: auto | flex-start |
+ flex-end | center | baseline |
+ stretch;} 
+
+   <br><br>
+                                </pre>
+
+                                <p class="nota">
+                                    Note that float, clear and vertical-align have no effect on a flex item.
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="item16">
+                                <p>
+                                    <h3 class="example">Example </h3>
+                                    <pre class="css">
+.parent {
+display: flex;
+height: 300px; /* Or whatever */
+          }
+.child {
+width: 100px;  /* Or whatever */
+height: 100px; /* Or whatever */
+ margin: auto;  /* Magic! */
+          }
+        </pre>
+                                </p>
+
+
+                            </div>
                         </div>
 
-                        <!-- **********item15*******************  -->
-
-                        <div class="item15">
-
-
-
-                        </div>
                     </div>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </article>

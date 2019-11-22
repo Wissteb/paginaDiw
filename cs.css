@@ -243,9 +243,7 @@ h2,
 article#c3 p,
 h2,
 article#c4 p,
-h2,
-article#c5 p,
-h2 {
+h2{
   display: block;
   text-align: center;
 
@@ -253,8 +251,7 @@ h2 {
 article#c1 p,
 article#c2 p,
 article#c3 p,
-article#c4 p,
-article#c5 p{
+article#c4 p{
   height: 170px;
 }
 

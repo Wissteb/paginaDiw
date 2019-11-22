@@ -7,181 +7,171 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="cs.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-   
+
 
     <!--##### ##########Aqui empieza header############# -->
     <header>
-            <!-- <div class="cuerpoheader"> -->
-    
-            <section class="busqueda">
-                <article class="social1">
-    
-                    <img src="img/facebook.png" class="facebookc1" alt="facebook">
-                    <img src="img/instagram.png" class="twiterc1" alt="twitter">
-                    <img src="img/twitter.png" class="instagramc1" alt="instagram">
-                </article>
-                <article class="busca">
-                        <input type="search" id="search" placeholder="Search..." class="buttonbuscar" />
-        
-                    </article>
-            </section>
-    
-            <section class="main-head">
-                <nav class="headnav">
-                    <ul class="menuhead">
-                        <li class="item_menuhead"><a href="index.html">Home</a></li>
-                        <li class="item_menuhead"><a href="css.html">Css</a></li>
-                        <li class="item_menuhead"><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <nav id="hamburguesa">
-                    <ul class="hamburgMenu">
-                        <li><img src="img/menu.png" alt="" width="70px" height="70px"></a>
-                            <ul class="submenu1">
-                                <li><a href="index.html"> Home</a></li>
-                                <li><a href="css.html">Css</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-    
-                            </ul>
-    
-                    </ul>
-                </nav>
-    
-                <div class="logo">
-                    <img src="img/milogo.png" class="logo1" alt="logo1">
-                </div>
-                <h1 class="titulo"> EasyCss</h1>
-            </section>
-        </header>
-    
-        <!--##### ##########Aqui empieza Main############# -->
-        <main class="content">
-            <section class="formulario">
-        <h1>Elegant Contact Form.</h1>
-       
-        <form>
-            <h1>Should you have any questions, please do not hesitate to contact me :</h1>
+        <!-- <div class="cuerpoheader"> -->
 
-            <div class="contentform">
-                <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+        <section class="busqueda">
+            <article class="social1">
 
+                <img src="img/facebook.png" class="facebookc1" alt="facebook">
+                <img src="img/instagram.png" class="twiterc1" alt="twitter">
+                <img src="img/twitter.png" class="instagramc1" alt="instagram">
+            </article>
+            <article class="busca">
+                <input type="search" id="search" placeholder="Search..." class="buttonbuscar" />
 
-                <div class="leftcontact">
-                    <div class="form-group">
-                        <p>Surname<span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-male"></i></span>
-                        <input type="text" name="nom" id="nom" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
+            </article>
+        </section>
 
-                    <div class="form-group">
-                        <p>Name <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-user"></i></span>
-                        <input type="text" name="prenom" id="prenom" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
+        <section class="main-head">
+            <nav class="headnav">
+                <ul class="menuhead">
+                    <li class="item_menuhead"><a href="index.html">Home</a></li>
+                    <li class="item_menuhead"><a href="css.html">Css</a></li>
+                    <li class="item_menuhead"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <nav id="hamburguesa">
+                <ul class="hamburgMenu">
+                    <li><img src="img/menu.png" alt="" width="70px" height="70px"></a>
+                        <ul class="submenu1">
+                            <li><a href="index.html"> Home</a></li>
+                            <li><a href="css.html">Css</a></li>
+                            <li><a href="contact.html">Contact</a></li>
 
-                    <div class="form-group">
-                        <p>E-mail <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                        <input type="email" name="email" id="email" data-rule="email"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire." />
-                        <div class="validation"></div>
-                    </div>
+                        </ul>
 
-                    <div class="form-group">
-                        <p>Company <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-home"></i></span>
-                        <input type="text" name="society" id="society" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
+                </ul>
+            </nav>
 
-                    <div class="form-group">
-                        <p>Company Address <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
-                        <input type="text" name="adresse" id="adresse" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Adresse' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <p>Postcode <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-map-marker"></i></span>
-                        <input type="text" name="postal" id="postal" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code postal' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
-
-
-
-                </div>
-
-                <div class="rightcontact">
-
-                    <div class="form-group">
-                        <p>City <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-building-o"></i></span>
-                        <input type="text" name="ville" id="ville" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <p>Phone number <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-phone"></i></span>
-                        <input type="text" name="phone" id="phone" data-rule="maxlen:10"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres" />
-                        <div class="validation"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <p>Function <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-info"></i></span>
-                        <input type="text" name="fonction" id="fonction" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <p>Subject <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-comment-o"></i></span>
-                        <input type="text" name="sujet" id="sujet" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné." />
-                        <div class="validation"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <p>Message <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                        <textarea name="message" rows="14" data-rule="required"
-                            data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
-                        <div class="validation"></div>
-                    </div>
-                </div>
+            <div class="logo">
+                <img src="img/milogo.png" class="logo1" alt="logo1">
             </div>
-            <button type="submit" class="bouton-contact">Send</button>
+            <h1 class="titulo"> EasyCss</h1>
+        </section>
+    </header>
 
-        </form>
-    </section>
-    <section class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2590.0119608411496!2d-0.3898949059225609!3d39.46795848802053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f46da4855e1%3A0x9c6c795bc92d164e!2sAbastos!5e0!3m2!1sen!2ses!4v1574043087984!5m2!1sen!2ses" height="700" frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
-    </section>
+    <!--##### ##########Aqui empieza Main############# -->
+    <main class="content">
+        <section class="formulario">
+
+
+            <form>
+                <h1>Should you have any questions, please do not hesitate to contact me :</h1>
+
+                <div class="contentform">
+                    <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+                    <div class="leftcontact">
+                        <div class="form-group">
+                            <p>Surname<span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-male"></i></span>
+                            <input type="text" name="nom" id="nom" required pattern="[A-Za-zñÑ]+"
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Name <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-user"></i></span>
+                            <input type="text" name="prenom" id="prenom" pattern="[A-Za-zñÑ]+" required
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>E-mail <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                            <input type="email" name="email" id="email" data-rule="email" required
+                                pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire." />
+                            <div class="validation"></div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <p> Address <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+                            <input type="text" name="adresse" id="adresse" data-rule="required" required
+                                pattern="[A-Za-zñÑ]+"
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'Adresse' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Postcode <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-map-marker"></i></span>
+                            <input type="text" name="postal" id="postal" data-rule="required" required
+                                pattern="[0-9]{5}"
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code postal' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="rightcontact">
+
+                        <div class="form-group">
+                            <p>City <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-building-o"></i></span>
+                            <input type="text" name="ville" id="ville" data-rule="required" required
+                                pattern="[A-Za-zñÑ]+"
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Phone number <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-phone"></i></span>
+                            <input type="text" name="phone" id="phone" data-rule="maxlen:10" required
+                                pattern="^(\+34|0034|34)?[6|7|8|9][0-9]{8}$"
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres" />
+                            <div class="validation"></div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <p>date <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-"></i></span>
+                            <input type="date" name="sujet" id="sujet" data-rule="required" required
+                                pattern="^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$"
+                                data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné." />
+                            <div class="validation"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <button type="submit" class="bouton-contact">Send</button>
+
+            </form>
+        </section>
+        <section class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2590.0119608411496!2d-0.3898949059225609!3d39.46795848802053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f46da4855e1%3A0x9c6c795bc92d164e!2sAbastos!5e0!3m2!1sen!2ses!4v1574043087984!5m2!1sen!2ses"
+                height="700" frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
+        </section>
     </main>
-    
+
 
 
 
     </div>
 
-  <!--##### ##########Aqui empieza El footer############# -->
-  <footer class="footer">
+    <!--##### ##########Aqui empieza El footer############# -->
+    <footer class="footer">
         <section class="logocontact">
             <article class="footer-logo">
                 <img src="img/milogo.png" class="logo2" alt="Footer Logo">

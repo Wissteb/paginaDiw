@@ -1,0 +1,25 @@
+article img {
+    width: 900px;
+    height: 500px;
+}
+
+.act1 {
+    background-color: rgb(43, 42, 44);
+    color: rgb(190, 182, 151);
+    border: rgb(220, 133, 20) solid 2px;
+
+}
+
+@media (min-width: 1300px) {
+    #hamburguesa {
+        display: none;
+    }
+}
+
+@media (min-width: 995px) and (max-width: 1299px) {}
+
+@media (min-width: 0px) and (max-width: 995px) {
+    .explicacion img {
+        width: 400px;
+    }
+}
