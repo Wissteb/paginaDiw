@@ -11,7 +11,10 @@
 
 
 }
-
+.selector{
+  font-size: 45px;
+  color: rgb(204, 78, 103);
+}
 @media (min-width: 1300px) {
     #hamburguesa {
       display: none;

@@ -5,7 +5,28 @@
 
 
 }
+.css{
+  background-color: rgb(43, 42, 44);
+  color: rgb(190, 182, 151);
+  border: rgb(220, 133, 20) solid 2px;
 
+}
+.nota{
+  border: darkgoldenrod 2px solid;
+  padding: 5%;
+  background-color: rgb(240, 197, 89);
+  color: rgb(41, 29, 13);
+}
+.box{
+  font-size: 45px;
+  color: rgb(177, 55, 140);
+}
+.explicacion h3{
+color: rgb(154, 55, 163);
+}
+.explicacion h4{
+color: rgb(175, 128, 52);
+}
 @media (min-width: 1300px) {
     #hamburguesa {
       display: none;

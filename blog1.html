@@ -47,7 +47,6 @@
                             <li><a href="contact.html">Contact</a></li>
 
                         </ul>
-
                 </ul>
             </nav>
 
@@ -61,7 +60,7 @@
     <main class="contenedor">
         <section class="content">
             <article class="explicacion">
-                <h1> The CSS Box Model</h1>
+                <h1 class="box">The CSS Box Model</h1>
                 <br>
                 <br>
 
@@ -114,7 +113,6 @@
                 </p>
                 <img src="imgblog1/1.PNG" class="imgblog1">
 
-
                 <h4><span> The standard CSS box model</span></h4>
                 <p> In the standard box model, if you give a box a width
                     and a height, this defines the width and height of the
@@ -141,57 +139,43 @@
                     height 210px (150 + 25 + 25 + 5 + 5),
                     as the padding and border are added to
                     the width used for the content box.</p>
-                    <br><br>
+                <br><br>
                 <img src="imgblog1/standardboxmodel.png" alt=""><br><br>
-
                 <p class="nota">
-
-                  <b>Note:</b> The margin is not counted towards the actual size of the box — sure,
+                    <b>Note:</b> The margin is not counted towards the actual size of the box — sure,
                     it affects the total space that the box will take up on the page, but only
                     the space outside the box. The box's area stops at the border — it does not
                     extend into the margin.
                 </p>
-<br><br><br><br>
-                 <h4>Here is the calculation:</h4>
-                 <p>
-                <pre class="css">
+                <br><br><br><br>
+                <h4>Here is the calculation:</h4>
+                <p>
+                    <pre class="css">
                  320px (width)
                  + 20px (left + right padding)
                  + 10px (left + right border)
                  + 0px (left + right margin)
                  = 350px
                 </pre>
+                    <!-- meter el ejemplo con css -->
+                    <br><br><br>
+                    The total width of an element should be calculated like this:
 
-                <!-- meter el ejemplo con css -->
-                <br><br><br>
-                 The total width of an element should be calculated like this:
-                 
-                 Total element width = width + left padding + right padding + left border + right border + left margin + right margin
-                 
-                 The total height of an element should be calculated like this:
-                 
-                 Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
-                 <br><br><br><br>
-                 </p>
+                    Total element width = width + left padding + right padding + left border + right border + left
+                    margin + right margin
 
+                    The total height of an element should be calculated like this:
 
-
-
-
-
-
-
-
+                    Total element height = height + top padding + bottom padding + top border + bottom border + top
+                    margin + bottom margin
+                    <br><br><br><br>
+                </p>
 
 
             </article>
 
 
             <!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model -->
-
-
-
-
 
         </section>
 
@@ -223,18 +207,6 @@
                         <ul class="submenu">
                             <li><a href="blog4.html">Learn</a></li>
                             <li><a href="exercice.html#act4">Exercises</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Lesson5</a>
-                        <ul class="submenu">
-                            <li><a href="blog5.html">Learn</a></li>
-                            <li><a href="exercice.html#act5">Exercises</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Lesson6</a>
-                        <ul class="submenu">
-                            <li><a href="blog6.html">Learn</a></li>
-                            <li><a href="exercice.html#act6">Exercises</a></li>
                         </ul>
                     </li>
                 </ul>
